@@ -1,0 +1,47 @@
+﻿@model IEnumerable<JogosModel>
+
+@{
+    ViewData["title"] = "Jogos Criados";
+}
+
+<div class="container">
+
+    <div class="d-flex justify-content-between align-items-center mb-5">
+        <h1>Jogos Criados</h1>
+        <a class="btn btn-success mx-2" asp-controller="Jogo" asp-action="CriarNovoJogo">Fazer novo Jogo</a>
+    </div>
+
+    <table class="table table-dark table-hover">
+        <thead>
+            <tr>
+                <th scope="col">Id</th>
+                <th scope="col">Nome Jogo</th>
+                <th scope="col">Qtde de Números</th>
+                <th scope="col">Minímo de escolhas</th>
+                <th scope="col">Data de Criação</th>
+                <th scope="col">Data do Sorteio</th>
+            </tr>
+        </thead>
+        <tbody>
+            @if (Model != null)
+            {
+                @foreach (var jogos in Model)
+                {
+                    <tr>
+                        <th scope="row">@jogos.Id</th>
+                        <th scope="row">@jogos.Nome</th>
+                        <th scope="row">@jogos.MaximoNumeros</th>
+                        <th scope="row">@jogos.QtdNumeros</th>
+                        <th scope="col">Data de Criação</th>
+                        <th scope="row">@jogos.DataSorteio</th>
+                        <td>
+                            <a class="btn btn-warning mx-2" asp-controller="Volante" asp-action="Editar" asp-route-id="@jogos.Id">Editar</a>
+                            <a class="btn btn-danger mx-2" asp-controller="Volante" asp-action="Excluir" asp-route-id="@jogos.Id">Excluir</a>
+                        </td>
+                    </tr>
+                }
+            }
+        </tbody>
+    </table>
+
+</div>

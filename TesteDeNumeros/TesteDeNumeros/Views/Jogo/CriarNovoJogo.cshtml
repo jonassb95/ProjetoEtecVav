@@ -1,0 +1,30 @@
+﻿@model JogosModel
+
+
+@{
+    ViewData["title"] = "Fazer Jogo";
+}
+
+<div class="contnainer bg-light p-5 rounded-5">
+    <div class="mb-5 text-center">
+        <h1 class="text-light">Fazer Jogo</h1>
+
+    </div>
+    <form method="post" asp-controller="Jogo" asp-action="Cadastrar">
+        <div class="row g-3">
+            <div class="col">
+                <input type="text" class="form-control" placeholder="Nome do Sorteio/Jogo" aria-label="Nome do Jogo">
+            </div>
+            <div class="col">
+                <input type="text" class="form-control" placeholder="Quantidade de números" aria-label="Quantidade numeros">
+            </div>
+        </div>
+        <div class="btns">
+            <div class="d-flex gap-5 mt-5">
+                <button type="submit" class="btn btn-success w-50" id="btnConfirm">Confirmar Jogo</button>
+                <a class="btn btn-primary w-50" asp-controller="Jogo" asp-action="FazerJogo">Voltar</a>
+            </div>
+        </div>
+    </form>
+
+</div>

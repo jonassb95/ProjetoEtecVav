@@ -1,0 +1,39 @@
+﻿@model JogosModel
+
+
+@{
+    ViewData["title"] = "Fazer Jogo";
+}
+
+<div class="contnainer bg-light p-5 rounded-5">
+    <div class="mb-5 text-center">
+        <h1 class="text-light">Fazer Jogo</h1>
+
+    </div>
+    <form method="post" asp-controller="Volante" asp-action="Cadastrar">
+        <div class="mb-3">
+            <label for="Numeros" class="form-label text-light">Escolha seus números</label>
+@*            <input type="text" class="form-control" asp-for="Numeros" id="Numeros">
+            <span class="text-danger" asp-validation-for="Numeros"></span>*@
+        </div>
+
+        <div id="inputField" class="inputField">
+
+        </div>
+
+        <input type="text" id="escolhidos" name="escolhidos" value="" disabled="">
+
+      <div id="boxJogos" class="boxJogos" style="width: 60%;">
+
+    <!-- Onde os números são criados conforme a necessidade. -->
+
+      </div>
+      <div class="btns">
+            <div class="d-flex gap-5 mt-5">
+                <button type="submit" class="btn btn-success w-50" id="btnConfirm">Confirmar Jogo</button>
+                <a class="btn btn-primary w-50" asp-controller="Volante" asp-action="FazerJogo">Voltar</a>
+            </div>
+      </div>
+    </form>
+
+</div>

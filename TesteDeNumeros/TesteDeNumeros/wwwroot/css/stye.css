@@ -1,0 +1,80 @@
+﻿
+
+
+:Where(.form1, .container, #inputField) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#inputField {
+    flex-direction: row;
+    column-gap: 10px;
+}
+
+.conteudo {
+    border: 1px solid;
+    margin: 0 10%;
+    width: 50%;
+    background: #DDD;
+    padding: 30px 65px;
+    border-radius: 12px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+div h1 {
+    height: 65px;
+    width: 120px;
+    color: green;
+    font-size: 2.5rem;
+}
+
+form div#inputField input {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    outline: none;
+    text-align: center;
+    font-size: 1.5rem;
+    border: 1px solid #ddd;
+}
+
+form .btns {
+    display: flex;
+    flex-direction: row;
+}
+
+form button {
+    margin-top: 25px;
+    width: 50%;
+    color: #fff;
+    font-size: 1rem;
+    border: none;
+    padding: 9px 0;
+    cursor: pointer;
+    border-radius: 6px;
+    pointer-events: none;
+    background: #6e93f7;
+    transition: all 0.2s ease;
+}
+
+form #btnCancel {
+    background: red;
+}
+/*
+form button.active {
+    background: #4070f4;
+    pointer-events: auto;
+}*/
+
+form button:hover {
+    background: #0e4bf1;
+}
+
+/*
+form #inputField input::-webkit-inner-spin-button,
+form #inputField input::-webkit-outer-spin-button {
+    display: none;
+}
+*/

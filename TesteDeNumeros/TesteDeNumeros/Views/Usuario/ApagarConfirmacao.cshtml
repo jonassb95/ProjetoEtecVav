@@ -1,0 +1,16 @@
+﻿@using TesteDeNumeros.Enums;
+@model UsuariosModel
+
+
+@{
+    ViewData["title"] = "Confirmação de apagar o usuario";
+}
+
+<div class="text-center">
+    <h3>Realmente deseja apagar o usuário (@Model.Nome)?</h3>
+</div>
+
+<form method="post" asp-action="Apagar" asp-controller="Usuario" asp-route-id="@Model.Id">
+    <a class="btn btn-primary btn-block" asp-action="Index" asp-controller="Usuario" role="button">Cancelar exclusão</a>
+    <input type="submit" class="btn btn-danger btn-block" value="Confirmar exclusão"/>
+</form>

@@ -1,0 +1,169 @@
+D:\Teste\TesteDeNumeros\TesteDeNumeros\bin\Debug\net6.0\appsettings.Development.json
+D:\Teste\TesteDeNumeros\TesteDeNumeros\bin\Debug\net6.0\appsettings.json
+D:\Teste\TesteDeNumeros\TesteDeNumeros\bin\Debug\net6.0\TesteDeNumeros.staticwebassets.runtime.json
+D:\Teste\TesteDeNumeros\TesteDeNumeros\bin\Debug\net6.0\TesteDeNumeros.exe
+D:\Teste\TesteDeNumeros\TesteDeNumeros\bin\Debug\net6.0\TesteDeNumeros.deps.json
+D:\Teste\TesteDeNumeros\TesteDeNumeros\bin\Debug\net6.0\TesteDeNumeros.runtimeconfig.json
+D:\Teste\TesteDeNumeros\TesteDeNumeros\bin\Debug\net6.0\TesteDeNumeros.dll
+D:\Teste\TesteDeNumeros\TesteDeNumeros\bin\Debug\net6.0\TesteDeNumeros.pdb
+D:\Teste\TesteDeNumeros\TesteDeNumeros\bin\Debug\net6.0\Azure.Core.dll
+D:\Teste\TesteDeNumeros\TesteDeNumeros\bin\Debug\net6.0\Azure.Identity.dll
+D:\Teste\TesteDeNumeros\TesteDeNumeros\bin\Debug\net6.0\Humanizer.dll
+D:\Teste\TesteDeNumeros\TesteDeNumeros\bin\Debug\net6.0\Microsoft.Bcl.AsyncInterfaces.dll
+D:\Teste\TesteDeNumeros\TesteDeNumeros\bin\Debug\net6.0\Microsoft.Data.SqlClient.dll
+D:\Teste\TesteDeNumeros\TesteDeNumeros\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.dll
+D:\Teste\TesteDeNumeros\TesteDeNumeros\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+D:\Teste\TesteDeNumeros\TesteDeNumeros\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Design.dll
+D:\Teste\TesteDeNumeros\TesteDeNumeros\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Relational.dll
+D:\Teste\TesteDeNumeros\TesteDeNumeros\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.SqlServer.dll
+D:\Teste\TesteDeNumeros\TesteDeNumeros\bin\Debug\net6.0\Microsoft.Extensions.Caching.Abstractions.dll
+D:\Teste\TesteDeNumeros\TesteDeNumeros\bin\Debug\net6.0\Microsoft.Extensions.Caching.Memory.dll
+D:\Teste\TesteDeNumeros\TesteDeNumeros\bin\Debug\net6.0\Microsoft.Extensions.Configuration.Abstractions.dll
+D:\Teste\TesteDeNumeros\TesteDeNumeros\bin\Debug\net6.0\Microsoft.Extensions.DependencyInjection.dll
+D:\Teste\TesteDeNumeros\TesteDeNumeros\bin\Debug\net6.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+D:\Teste\TesteDeNumeros\TesteDeNumeros\bin\Debug\net6.0\Microsoft.Extensions.DependencyModel.dll
+D:\Teste\TesteDeNumeros\TesteDeNumeros\bin\Debug\net6.0\Microsoft.Extensions.Logging.dll
+D:\Teste\TesteDeNumeros\TesteDeNumeros\bin\Debug\net6.0\Microsoft.Extensions.Logging.Abstractions.dll
+D:\Teste\TesteDeNumeros\TesteDeNumeros\bin\Debug\net6.0\Microsoft.Extensions.Options.dll
+D:\Teste\TesteDeNumeros\TesteDeNumeros\bin\Debug\net6.0\Microsoft.Extensions.Primitives.dll
+D:\Teste\TesteDeNumeros\TesteDeNumeros\bin\Debug\net6.0\Microsoft.Identity.Client.dll
+D:\Teste\TesteDeNumeros\TesteDeNumeros\bin\Debug\net6.0\Microsoft.Identity.Client.Extensions.Msal.dll
+D:\Teste\TesteDeNumeros\TesteDeNumeros\bin\Debug\net6.0\Microsoft.IdentityModel.Abstractions.dll
+D:\Teste\TesteDeNumeros\TesteDeNumeros\bin\Debug\net6.0\Microsoft.IdentityModel.JsonWebTokens.dll
+D:\Teste\TesteDeNumeros\TesteDeNumeros\bin\Debug\net6.0\Microsoft.IdentityModel.Logging.dll
+D:\Teste\TesteDeNumeros\TesteDeNumeros\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.dll
+D:\Teste\TesteDeNumeros\TesteDeNumeros\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+D:\Teste\TesteDeNumeros\TesteDeNumeros\bin\Debug\net6.0\Microsoft.IdentityModel.Tokens.dll
+D:\Teste\TesteDeNumeros\TesteDeNumeros\bin\Debug\net6.0\Microsoft.SqlServer.Server.dll
+D:\Teste\TesteDeNumeros\TesteDeNumeros\bin\Debug\net6.0\Microsoft.Win32.SystemEvents.dll
+D:\Teste\TesteDeNumeros\TesteDeNumeros\bin\Debug\net6.0\Mono.TextTemplating.dll
+D:\Teste\TesteDeNumeros\TesteDeNumeros\bin\Debug\net6.0\System.CodeDom.dll
+D:\Teste\TesteDeNumeros\TesteDeNumeros\bin\Debug\net6.0\System.Configuration.ConfigurationManager.dll
+D:\Teste\TesteDeNumeros\TesteDeNumeros\bin\Debug\net6.0\System.Drawing.Common.dll
+D:\Teste\TesteDeNumeros\TesteDeNumeros\bin\Debug\net6.0\System.IdentityModel.Tokens.Jwt.dll
+D:\Teste\TesteDeNumeros\TesteDeNumeros\bin\Debug\net6.0\System.Memory.Data.dll
+D:\Teste\TesteDeNumeros\TesteDeNumeros\bin\Debug\net6.0\System.Runtime.Caching.dll
+D:\Teste\TesteDeNumeros\TesteDeNumeros\bin\Debug\net6.0\System.Security.Cryptography.ProtectedData.dll
+D:\Teste\TesteDeNumeros\TesteDeNumeros\bin\Debug\net6.0\System.Security.Permissions.dll
+D:\Teste\TesteDeNumeros\TesteDeNumeros\bin\Debug\net6.0\System.Text.Encodings.Web.dll
+D:\Teste\TesteDeNumeros\TesteDeNumeros\bin\Debug\net6.0\System.Text.Json.dll
+D:\Teste\TesteDeNumeros\TesteDeNumeros\bin\Debug\net6.0\System.Windows.Extensions.dll
+D:\Teste\TesteDeNumeros\TesteDeNumeros\bin\Debug\net6.0\runtimes\unix\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+D:\Teste\TesteDeNumeros\TesteDeNumeros\bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+D:\Teste\TesteDeNumeros\TesteDeNumeros\bin\Debug\net6.0\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.dll
+D:\Teste\TesteDeNumeros\TesteDeNumeros\bin\Debug\net6.0\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
+D:\Teste\TesteDeNumeros\TesteDeNumeros\bin\Debug\net6.0\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
+D:\Teste\TesteDeNumeros\TesteDeNumeros\bin\Debug\net6.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
+D:\Teste\TesteDeNumeros\TesteDeNumeros\bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.0\Microsoft.Win32.SystemEvents.dll
+D:\Teste\TesteDeNumeros\TesteDeNumeros\bin\Debug\net6.0\runtimes\unix\lib\netcoreapp3.0\System.Drawing.Common.dll
+D:\Teste\TesteDeNumeros\TesteDeNumeros\bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.0\System.Drawing.Common.dll
+D:\Teste\TesteDeNumeros\TesteDeNumeros\bin\Debug\net6.0\runtimes\win\lib\netstandard2.0\System.Runtime.Caching.dll
+D:\Teste\TesteDeNumeros\TesteDeNumeros\bin\Debug\net6.0\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
+D:\Teste\TesteDeNumeros\TesteDeNumeros\bin\Debug\net6.0\runtimes\browser\lib\net6.0\System.Text.Encodings.Web.dll
+D:\Teste\TesteDeNumeros\TesteDeNumeros\bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.0\System.Windows.Extensions.dll
+D:\Teste\TesteDeNumeros\TesteDeNumeros\obj\Debug\net6.0\TesteDeNumeros.csproj.AssemblyReference.cache
+D:\Teste\TesteDeNumeros\TesteDeNumeros\obj\Debug\net6.0\TesteDeNumeros.GeneratedMSBuildEditorConfig.editorconfig
+D:\Teste\TesteDeNumeros\TesteDeNumeros\obj\Debug\net6.0\TesteDeNumeros.AssemblyInfoInputs.cache
+D:\Teste\TesteDeNumeros\TesteDeNumeros\obj\Debug\net6.0\TesteDeNumeros.AssemblyInfo.cs
+D:\Teste\TesteDeNumeros\TesteDeNumeros\obj\Debug\net6.0\TesteDeNumeros.csproj.CoreCompileInputs.cache
+D:\Teste\TesteDeNumeros\TesteDeNumeros\obj\Debug\net6.0\TesteDeNumeros.MvcApplicationPartsAssemblyInfo.cache
+D:\Teste\TesteDeNumeros\TesteDeNumeros\obj\Debug\net6.0\TesteDeNumeros.RazorAssemblyInfo.cache
+D:\Teste\TesteDeNumeros\TesteDeNumeros\obj\Debug\net6.0\TesteDeNumeros.RazorAssemblyInfo.cs
+D:\Teste\TesteDeNumeros\TesteDeNumeros\obj\Debug\net6.0\staticwebassets.build.json
+D:\Teste\TesteDeNumeros\TesteDeNumeros\obj\Debug\net6.0\staticwebassets.development.json
+D:\Teste\TesteDeNumeros\TesteDeNumeros\obj\Debug\net6.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
+D:\Teste\TesteDeNumeros\TesteDeNumeros\obj\Debug\net6.0\scopedcss\bundle\TesteDeNumeros.styles.css
+D:\Teste\TesteDeNumeros\TesteDeNumeros\obj\Debug\net6.0\scopedcss\projectbundle\TesteDeNumeros.bundle.scp.css
+D:\Teste\TesteDeNumeros\TesteDeNumeros\obj\Debug\net6.0\TesteDeNumeros.csproj.CopyComplete
+D:\Teste\TesteDeNumeros\TesteDeNumeros\obj\Debug\net6.0\TesteDeNumeros.dll
+D:\Teste\TesteDeNumeros\TesteDeNumeros\obj\Debug\net6.0\refint\TesteDeNumeros.dll
+D:\Teste\TesteDeNumeros\TesteDeNumeros\obj\Debug\net6.0\TesteDeNumeros.pdb
+D:\Teste\TesteDeNumeros\TesteDeNumeros\obj\Debug\net6.0\TesteDeNumeros.genruntimeconfig.cache
+D:\Teste\TesteDeNumeros\TesteDeNumeros\obj\Debug\net6.0\ref\TesteDeNumeros.dll
+D:\Estudos\Trabalho TCC ETEC\Teste\TesteDeNumeros\TesteDeNumeros\bin\Debug\net6.0\appsettings.Development.json
+D:\Estudos\Trabalho TCC ETEC\Teste\TesteDeNumeros\TesteDeNumeros\bin\Debug\net6.0\appsettings.json
+D:\Estudos\Trabalho TCC ETEC\Teste\TesteDeNumeros\TesteDeNumeros\bin\Debug\net6.0\TesteDeNumeros.staticwebassets.runtime.json
+D:\Estudos\Trabalho TCC ETEC\Teste\TesteDeNumeros\TesteDeNumeros\bin\Debug\net6.0\TesteDeNumeros.exe
+D:\Estudos\Trabalho TCC ETEC\Teste\TesteDeNumeros\TesteDeNumeros\bin\Debug\net6.0\TesteDeNumeros.deps.json
+D:\Estudos\Trabalho TCC ETEC\Teste\TesteDeNumeros\TesteDeNumeros\bin\Debug\net6.0\TesteDeNumeros.runtimeconfig.json
+D:\Estudos\Trabalho TCC ETEC\Teste\TesteDeNumeros\TesteDeNumeros\bin\Debug\net6.0\TesteDeNumeros.dll
+D:\Estudos\Trabalho TCC ETEC\Teste\TesteDeNumeros\TesteDeNumeros\bin\Debug\net6.0\TesteDeNumeros.pdb
+D:\Estudos\Trabalho TCC ETEC\Teste\TesteDeNumeros\TesteDeNumeros\bin\Debug\net6.0\Azure.Core.dll
+D:\Estudos\Trabalho TCC ETEC\Teste\TesteDeNumeros\TesteDeNumeros\bin\Debug\net6.0\Azure.Identity.dll
+D:\Estudos\Trabalho TCC ETEC\Teste\TesteDeNumeros\TesteDeNumeros\bin\Debug\net6.0\Humanizer.dll
+D:\Estudos\Trabalho TCC ETEC\Teste\TesteDeNumeros\TesteDeNumeros\bin\Debug\net6.0\Microsoft.Bcl.AsyncInterfaces.dll
+D:\Estudos\Trabalho TCC ETEC\Teste\TesteDeNumeros\TesteDeNumeros\bin\Debug\net6.0\Microsoft.Data.SqlClient.dll
+D:\Estudos\Trabalho TCC ETEC\Teste\TesteDeNumeros\TesteDeNumeros\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.dll
+D:\Estudos\Trabalho TCC ETEC\Teste\TesteDeNumeros\TesteDeNumeros\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+D:\Estudos\Trabalho TCC ETEC\Teste\TesteDeNumeros\TesteDeNumeros\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Design.dll
+D:\Estudos\Trabalho TCC ETEC\Teste\TesteDeNumeros\TesteDeNumeros\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Relational.dll
+D:\Estudos\Trabalho TCC ETEC\Teste\TesteDeNumeros\TesteDeNumeros\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.SqlServer.dll
+D:\Estudos\Trabalho TCC ETEC\Teste\TesteDeNumeros\TesteDeNumeros\bin\Debug\net6.0\Microsoft.Extensions.Caching.Abstractions.dll
+D:\Estudos\Trabalho TCC ETEC\Teste\TesteDeNumeros\TesteDeNumeros\bin\Debug\net6.0\Microsoft.Extensions.Caching.Memory.dll
+D:\Estudos\Trabalho TCC ETEC\Teste\TesteDeNumeros\TesteDeNumeros\bin\Debug\net6.0\Microsoft.Extensions.Configuration.Abstractions.dll
+D:\Estudos\Trabalho TCC ETEC\Teste\TesteDeNumeros\TesteDeNumeros\bin\Debug\net6.0\Microsoft.Extensions.DependencyInjection.dll
+D:\Estudos\Trabalho TCC ETEC\Teste\TesteDeNumeros\TesteDeNumeros\bin\Debug\net6.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+D:\Estudos\Trabalho TCC ETEC\Teste\TesteDeNumeros\TesteDeNumeros\bin\Debug\net6.0\Microsoft.Extensions.DependencyModel.dll
+D:\Estudos\Trabalho TCC ETEC\Teste\TesteDeNumeros\TesteDeNumeros\bin\Debug\net6.0\Microsoft.Extensions.Logging.dll
+D:\Estudos\Trabalho TCC ETEC\Teste\TesteDeNumeros\TesteDeNumeros\bin\Debug\net6.0\Microsoft.Extensions.Logging.Abstractions.dll
+D:\Estudos\Trabalho TCC ETEC\Teste\TesteDeNumeros\TesteDeNumeros\bin\Debug\net6.0\Microsoft.Extensions.Options.dll
+D:\Estudos\Trabalho TCC ETEC\Teste\TesteDeNumeros\TesteDeNumeros\bin\Debug\net6.0\Microsoft.Extensions.Primitives.dll
+D:\Estudos\Trabalho TCC ETEC\Teste\TesteDeNumeros\TesteDeNumeros\bin\Debug\net6.0\Microsoft.Identity.Client.dll
+D:\Estudos\Trabalho TCC ETEC\Teste\TesteDeNumeros\TesteDeNumeros\bin\Debug\net6.0\Microsoft.Identity.Client.Extensions.Msal.dll
+D:\Estudos\Trabalho TCC ETEC\Teste\TesteDeNumeros\TesteDeNumeros\bin\Debug\net6.0\Microsoft.IdentityModel.Abstractions.dll
+D:\Estudos\Trabalho TCC ETEC\Teste\TesteDeNumeros\TesteDeNumeros\bin\Debug\net6.0\Microsoft.IdentityModel.JsonWebTokens.dll
+D:\Estudos\Trabalho TCC ETEC\Teste\TesteDeNumeros\TesteDeNumeros\bin\Debug\net6.0\Microsoft.IdentityModel.Logging.dll
+D:\Estudos\Trabalho TCC ETEC\Teste\TesteDeNumeros\TesteDeNumeros\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.dll
+D:\Estudos\Trabalho TCC ETEC\Teste\TesteDeNumeros\TesteDeNumeros\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+D:\Estudos\Trabalho TCC ETEC\Teste\TesteDeNumeros\TesteDeNumeros\bin\Debug\net6.0\Microsoft.IdentityModel.Tokens.dll
+D:\Estudos\Trabalho TCC ETEC\Teste\TesteDeNumeros\TesteDeNumeros\bin\Debug\net6.0\Microsoft.SqlServer.Server.dll
+D:\Estudos\Trabalho TCC ETEC\Teste\TesteDeNumeros\TesteDeNumeros\bin\Debug\net6.0\Microsoft.Win32.SystemEvents.dll
+D:\Estudos\Trabalho TCC ETEC\Teste\TesteDeNumeros\TesteDeNumeros\bin\Debug\net6.0\Mono.TextTemplating.dll
+D:\Estudos\Trabalho TCC ETEC\Teste\TesteDeNumeros\TesteDeNumeros\bin\Debug\net6.0\System.CodeDom.dll
+D:\Estudos\Trabalho TCC ETEC\Teste\TesteDeNumeros\TesteDeNumeros\bin\Debug\net6.0\System.Configuration.ConfigurationManager.dll
+D:\Estudos\Trabalho TCC ETEC\Teste\TesteDeNumeros\TesteDeNumeros\bin\Debug\net6.0\System.Drawing.Common.dll
+D:\Estudos\Trabalho TCC ETEC\Teste\TesteDeNumeros\TesteDeNumeros\bin\Debug\net6.0\System.IdentityModel.Tokens.Jwt.dll
+D:\Estudos\Trabalho TCC ETEC\Teste\TesteDeNumeros\TesteDeNumeros\bin\Debug\net6.0\System.Memory.Data.dll
+D:\Estudos\Trabalho TCC ETEC\Teste\TesteDeNumeros\TesteDeNumeros\bin\Debug\net6.0\System.Runtime.Caching.dll
+D:\Estudos\Trabalho TCC ETEC\Teste\TesteDeNumeros\TesteDeNumeros\bin\Debug\net6.0\System.Security.Cryptography.ProtectedData.dll
+D:\Estudos\Trabalho TCC ETEC\Teste\TesteDeNumeros\TesteDeNumeros\bin\Debug\net6.0\System.Security.Permissions.dll
+D:\Estudos\Trabalho TCC ETEC\Teste\TesteDeNumeros\TesteDeNumeros\bin\Debug\net6.0\System.Text.Encodings.Web.dll
+D:\Estudos\Trabalho TCC ETEC\Teste\TesteDeNumeros\TesteDeNumeros\bin\Debug\net6.0\System.Text.Json.dll
+D:\Estudos\Trabalho TCC ETEC\Teste\TesteDeNumeros\TesteDeNumeros\bin\Debug\net6.0\System.Windows.Extensions.dll
+D:\Estudos\Trabalho TCC ETEC\Teste\TesteDeNumeros\TesteDeNumeros\bin\Debug\net6.0\runtimes\unix\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+D:\Estudos\Trabalho TCC ETEC\Teste\TesteDeNumeros\TesteDeNumeros\bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+D:\Estudos\Trabalho TCC ETEC\Teste\TesteDeNumeros\TesteDeNumeros\bin\Debug\net6.0\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.dll
+D:\Estudos\Trabalho TCC ETEC\Teste\TesteDeNumeros\TesteDeNumeros\bin\Debug\net6.0\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
+D:\Estudos\Trabalho TCC ETEC\Teste\TesteDeNumeros\TesteDeNumeros\bin\Debug\net6.0\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
+D:\Estudos\Trabalho TCC ETEC\Teste\TesteDeNumeros\TesteDeNumeros\bin\Debug\net6.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
+D:\Estudos\Trabalho TCC ETEC\Teste\TesteDeNumeros\TesteDeNumeros\bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.0\Microsoft.Win32.SystemEvents.dll
+D:\Estudos\Trabalho TCC ETEC\Teste\TesteDeNumeros\TesteDeNumeros\bin\Debug\net6.0\runtimes\unix\lib\netcoreapp3.0\System.Drawing.Common.dll
+D:\Estudos\Trabalho TCC ETEC\Teste\TesteDeNumeros\TesteDeNumeros\bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.0\System.Drawing.Common.dll
+D:\Estudos\Trabalho TCC ETEC\Teste\TesteDeNumeros\TesteDeNumeros\bin\Debug\net6.0\runtimes\win\lib\netstandard2.0\System.Runtime.Caching.dll
+D:\Estudos\Trabalho TCC ETEC\Teste\TesteDeNumeros\TesteDeNumeros\bin\Debug\net6.0\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
+D:\Estudos\Trabalho TCC ETEC\Teste\TesteDeNumeros\TesteDeNumeros\bin\Debug\net6.0\runtimes\browser\lib\net6.0\System.Text.Encodings.Web.dll
+D:\Estudos\Trabalho TCC ETEC\Teste\TesteDeNumeros\TesteDeNumeros\bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.0\System.Windows.Extensions.dll
+D:\Estudos\Trabalho TCC ETEC\Teste\TesteDeNumeros\TesteDeNumeros\obj\Debug\net6.0\TesteDeNumeros.csproj.AssemblyReference.cache
+D:\Estudos\Trabalho TCC ETEC\Teste\TesteDeNumeros\TesteDeNumeros\obj\Debug\net6.0\TesteDeNumeros.GeneratedMSBuildEditorConfig.editorconfig
+D:\Estudos\Trabalho TCC ETEC\Teste\TesteDeNumeros\TesteDeNumeros\obj\Debug\net6.0\TesteDeNumeros.AssemblyInfoInputs.cache
+D:\Estudos\Trabalho TCC ETEC\Teste\TesteDeNumeros\TesteDeNumeros\obj\Debug\net6.0\TesteDeNumeros.AssemblyInfo.cs
+D:\Estudos\Trabalho TCC ETEC\Teste\TesteDeNumeros\TesteDeNumeros\obj\Debug\net6.0\TesteDeNumeros.csproj.CoreCompileInputs.cache
+D:\Estudos\Trabalho TCC ETEC\Teste\TesteDeNumeros\TesteDeNumeros\obj\Debug\net6.0\TesteDeNumeros.MvcApplicationPartsAssemblyInfo.cache
+D:\Estudos\Trabalho TCC ETEC\Teste\TesteDeNumeros\TesteDeNumeros\obj\Debug\net6.0\TesteDeNumeros.RazorAssemblyInfo.cache
+D:\Estudos\Trabalho TCC ETEC\Teste\TesteDeNumeros\TesteDeNumeros\obj\Debug\net6.0\TesteDeNumeros.RazorAssemblyInfo.cs
+D:\Estudos\Trabalho TCC ETEC\Teste\TesteDeNumeros\TesteDeNumeros\obj\Debug\net6.0\staticwebassets\msbuild.TesteDeNumeros.Microsoft.AspNetCore.StaticWebAssets.props
+D:\Estudos\Trabalho TCC ETEC\Teste\TesteDeNumeros\TesteDeNumeros\obj\Debug\net6.0\staticwebassets\msbuild.build.TesteDeNumeros.props
+D:\Estudos\Trabalho TCC ETEC\Teste\TesteDeNumeros\TesteDeNumeros\obj\Debug\net6.0\staticwebassets\msbuild.buildMultiTargeting.TesteDeNumeros.props
+D:\Estudos\Trabalho TCC ETEC\Teste\TesteDeNumeros\TesteDeNumeros\obj\Debug\net6.0\staticwebassets\msbuild.buildTransitive.TesteDeNumeros.props
+D:\Estudos\Trabalho TCC ETEC\Teste\TesteDeNumeros\TesteDeNumeros\obj\Debug\net6.0\staticwebassets.pack.json
+D:\Estudos\Trabalho TCC ETEC\Teste\TesteDeNumeros\TesteDeNumeros\obj\Debug\net6.0\staticwebassets.build.json
+D:\Estudos\Trabalho TCC ETEC\Teste\TesteDeNumeros\TesteDeNumeros\obj\Debug\net6.0\staticwebassets.development.json
+D:\Estudos\Trabalho TCC ETEC\Teste\TesteDeNumeros\TesteDeNumeros\obj\Debug\net6.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
+D:\Estudos\Trabalho TCC ETEC\Teste\TesteDeNumeros\TesteDeNumeros\obj\Debug\net6.0\scopedcss\bundle\TesteDeNumeros.styles.css
+D:\Estudos\Trabalho TCC ETEC\Teste\TesteDeNumeros\TesteDeNumeros\obj\Debug\net6.0\scopedcss\projectbundle\TesteDeNumeros.bundle.scp.css
+D:\Estudos\Trabalho TCC ETEC\Teste\TesteDeNumeros\TesteDeNumeros\obj\Debug\net6.0\TesteDeNumeros.csproj.CopyComplete
+D:\Estudos\Trabalho TCC ETEC\Teste\TesteDeNumeros\TesteDeNumeros\obj\Debug\net6.0\TesteDeNumeros.dll
+D:\Estudos\Trabalho TCC ETEC\Teste\TesteDeNumeros\TesteDeNumeros\obj\Debug\net6.0\refint\TesteDeNumeros.dll
+D:\Estudos\Trabalho TCC ETEC\Teste\TesteDeNumeros\TesteDeNumeros\obj\Debug\net6.0\TesteDeNumeros.pdb
+D:\Estudos\Trabalho TCC ETEC\Teste\TesteDeNumeros\TesteDeNumeros\obj\Debug\net6.0\TesteDeNumeros.genruntimeconfig.cache
+D:\Estudos\Trabalho TCC ETEC\Teste\TesteDeNumeros\TesteDeNumeros\obj\Debug\net6.0\ref\TesteDeNumeros.dll
