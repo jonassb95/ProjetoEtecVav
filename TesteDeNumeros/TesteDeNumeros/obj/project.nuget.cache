@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "ZrHr6gFq5sSyKStJ1jNPtfyGO1G1Hv7PPDB1iusIUU5farjWMm+4b54wrq1Rjp+/Ftfuj36Uc2hoFQAOcepDAw==",
+  "dgSpecHash": "m5fvcgzYlCFMAVqtUMNaXYrHsEzeJPmjjvtKkUlBk9RHar2oNPZAHL+UNuBkWpZUc0PVmjHLAQ2FQRQDtZXiWQ==",
   "success": true,
-  "projectFilePath": "D:\\Estudos\\Trabalho TCC ETEC\\Teste\\TesteDeNumeros\\TesteDeNumeros\\LotoPrize.csproj",
+  "projectFilePath": "D:\\Estudos\\Trabalho TCC ETEC\\Teste\\ProjetoEtecVav\\TesteDeNumeros\\TesteDeNumeros\\LotoPrize.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Jonas\\.nuget\\packages\\azure.core\\1.24.0\\azure.core.1.24.0.nupkg.sha512",
     "C:\\Users\\Jonas\\.nuget\\packages\\azure.identity\\1.6.0\\azure.identity.1.6.0.nupkg.sha512",

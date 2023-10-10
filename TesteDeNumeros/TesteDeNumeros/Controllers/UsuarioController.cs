@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using System.Linq;
 using TesteDeNumeros.Data;
 using TesteDeNumeros.Models;
 
@@ -21,7 +22,7 @@ namespace TesteDeNumerosLivros.Controllers
             return View(usuarios);
         }
 
-        
+
         public IActionResult Cadastrar()
         {
             return View();
@@ -62,19 +63,50 @@ namespace TesteDeNumerosLivros.Controllers
         }
 
         [HttpPost]
-
-        public IActionResult Editar(UsuariosModel usuarios)
+        public IActionResult Editar(UsuariosModel usuario)
         {
             if (ModelState.IsValid)
             {
-                _db.Usuarios.Update(usuarios);
+                _db.Usuarios.Update(usuario);
                 _db.SaveChanges();
 
                 return RedirectToAction("Index");
             }
 
-            return View(usuarios);
+            return View(usuario);
         }
+
+
+        [HttpPost]
+        //public IActionResult Editar(UsuariosSemSenhaModel usuarioSemSenhaModel)
+        //{
+        //    try
+        //    {
+        //        UsuariosModel usuario = null;
+
+        //        if (ModelState.IsValid)
+        //        {
+
+        //            usuario = new UsuariosModel()
+        //            {
+        //                Id = usuarioSemSenhaModel.Id,
+        //                Nome = usuarioSemSenhaModel.Nome,
+        //                Email = usuarioSemSenhaModel.Email
+        //            };
+
+
+        //            usuario = _db.Usuarios.Update(usuario);
+        //            _db.SaveChanges();
+        //            TempData["MensagemSucesso"] = "Usuário Atualizado com sucesso!";
+        //            return RedirectToAction("Index");
+        //        }
+
+        //        return View(usuario);
+        //    }
+
+        //}
+               
+
 
         [HttpGet]
         public IActionResult ApagarConfirmacao(int? id)

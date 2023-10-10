@@ -2,8 +2,11 @@
   "ExpandedNodes": [
     "",
     "\\TesteDeNumeros",
-    "\\TesteDeNumeros\\TesteDeNumeros"
+    "\\TesteDeNumeros\\TesteDeNumeros",
+    "\\TesteDeNumeros\\TesteDeNumeros\\Controllers",
+    "\\TesteDeNumeros\\TesteDeNumeros\\Views",
+    "\\TesteDeNumeros\\TesteDeNumeros\\Views\\Shared"
   ],
-  "SelectedNode": "\\TesteDeNumeros\\TesteDeNumeros\\TesteDeNumeros.csproj",
+  "SelectedNode": "\\TesteDeNumeros\\LotoPrize.sln",
   "PreviewInSolutionExplorer": false
 }

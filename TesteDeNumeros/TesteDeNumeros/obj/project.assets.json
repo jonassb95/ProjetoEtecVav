@@ -3516,11 +3516,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Estudos\\Trabalho TCC ETEC\\Teste\\TesteDeNumeros\\TesteDeNumeros\\LotoPrize.csproj",
+      "projectUniqueName": "D:\\Estudos\\Trabalho TCC ETEC\\Teste\\ProjetoEtecVav\\TesteDeNumeros\\TesteDeNumeros\\LotoPrize.csproj",
       "projectName": "LotoPrize",
-      "projectPath": "D:\\Estudos\\Trabalho TCC ETEC\\Teste\\TesteDeNumeros\\TesteDeNumeros\\LotoPrize.csproj",
+      "projectPath": "D:\\Estudos\\Trabalho TCC ETEC\\Teste\\ProjetoEtecVav\\TesteDeNumeros\\TesteDeNumeros\\LotoPrize.csproj",
       "packagesPath": "C:\\Users\\Jonas\\.nuget\\packages\\",
-      "outputPath": "D:\\Estudos\\Trabalho TCC ETEC\\Teste\\TesteDeNumeros\\TesteDeNumeros\\obj\\",
+      "outputPath": "D:\\Estudos\\Trabalho TCC ETEC\\Teste\\ProjetoEtecVav\\TesteDeNumeros\\TesteDeNumeros\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Jonas\\AppData\\Roaming\\NuGet\\NuGet.Config",

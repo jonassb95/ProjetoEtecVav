@@ -1,0 +1,72 @@
+﻿@using LotoPrize.Models;
+@model LoginModel
+
+@{
+    Layout = "_LayoutDeslogado";
+    ViewData["Title"] = "Login";
+}
+
+@if (TempData["MensagemErro"] != null)
+{
+    <div class="alert alert-danger" role="alert">
+        <button type="button" class="btn btn-danger btn-sm close-alert" data-bs-dismiss="alert" aria-label="Close">X</button>
+        @TempData["MensagemErro"]
+    </div>
+}
+
+<div class="login-reg-panel">
+	<div class="login-info-box">
+		<h2>Já tem conta?</h2>
+		<p>Faça seu login abaixo</p>
+		<label id="label-register" for="log-reg-show">Entrar</label>
+		<input type="radio" name="active-log-panel" id="log-reg-show" checked="checked">
+	</div>
+
+	<div class="register-info-box">
+		<h2>Ainda não tem conta?</h2>
+		<p>Faça seu cadastro abaixo</p>
+		<label id="label-login" for="log-login-show">Cadastrar</label>
+		<input type="radio" name="active-log-panel" id="log-login-show">
+	</div>
+
+	<div class="white-panel">
+		<div class="login-show">
+			<h2>LOGIN</h2>
+			<form asp-controller="Login" asp-action="Entrar" method="post">
+				<input type="text" asp-for="Login" id="IptLogin" placeholder="Email">
+				@Html.ValidationMessageFor(x => x.Login)
+				<input type="password" asp-for="Senha" id="IptSenha" placeholder="Senha">
+				@Html.ValidationMessageFor(x => x.Senha)
+				<input type="submit" value="Entrar">
+				<a href="">Esqueceu a senha?</a>
+			</form>
+		</div>
+		<div class="register-show">
+			<h2>REGISTER</h2>
+			<form method="post" asp-controller="Usuario" asp-action="Cadastrar">
+				<input type="text" asp-for="Nome" class="form-control" id="txtNome" aria-describedby="Nome do usuario" placeholder="Nome e sobrenome">
+				@Html.ValidationMessageFor(x => x.Nome)
+				<input type="text" asp-for="Login" id="InpEmail" placeholder="Email">
+				@Html.ValidationMessageFor(x => x.Login)
+				<input type="password" asp-for="Senha" id="InpSenha" placeholder="Senha">
+				@Html.ValidationMessageFor(x => x.Senha)
+				<input type="submit" value="Cadastrar">
+			</form>
+		</div>
+	</div>
+</div>
+
+@* <form asp-controller="Login" asp-action="Entrar" method="post">
+    <div class="mb-3">
+        <label for="IptLogin" class="form-label">Login</label>
+        <input type="text" asp-for="Login" class="form-control" id="IptLogin" aria-describedby="emailHelp">
+        @Html.ValidationMessageFor(x => x.Login)
+    </div>
+    <div class="mb-3">
+        <label for="IptSenha" class="form-label">Senha</label>
+        <input type="password" asp-for="Senha" class="form-control" id="IptSenha">
+        @Html.ValidationMessageFor(x => x.Senha)
+    </div>
+
+    <button type="submit" class="btn btn-primary btn-block">Entrar</button>
+</form> *@
