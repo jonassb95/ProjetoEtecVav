@@ -1,20 +1,25 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Estudos\\Trabalho TCC ETEC\\Teste\\ProjetoEtecVav\\TesteDeNumeros\\TesteDeNumeros\\LotoPrize.csproj": {}
+    "C:\\Projetos\\NoobDoJonas\\ProjetoEtecVav\\TesteDeNumeros\\TesteDeNumeros\\LotoPrize.csproj": {}
   },
   "projects": {
-    "D:\\Estudos\\Trabalho TCC ETEC\\Teste\\ProjetoEtecVav\\TesteDeNumeros\\TesteDeNumeros\\LotoPrize.csproj": {
+    "C:\\Projetos\\NoobDoJonas\\ProjetoEtecVav\\TesteDeNumeros\\TesteDeNumeros\\LotoPrize.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Estudos\\Trabalho TCC ETEC\\Teste\\ProjetoEtecVav\\TesteDeNumeros\\TesteDeNumeros\\LotoPrize.csproj",
+        "projectUniqueName": "C:\\Projetos\\NoobDoJonas\\ProjetoEtecVav\\TesteDeNumeros\\TesteDeNumeros\\LotoPrize.csproj",
         "projectName": "LotoPrize",
-        "projectPath": "D:\\Estudos\\Trabalho TCC ETEC\\Teste\\ProjetoEtecVav\\TesteDeNumeros\\TesteDeNumeros\\LotoPrize.csproj",
-        "packagesPath": "C:\\Users\\Jonas\\.nuget\\packages\\",
-        "outputPath": "D:\\Estudos\\Trabalho TCC ETEC\\Teste\\ProjetoEtecVav\\TesteDeNumeros\\TesteDeNumeros\\obj\\",
+        "projectPath": "C:\\Projetos\\NoobDoJonas\\ProjetoEtecVav\\TesteDeNumeros\\TesteDeNumeros\\LotoPrize.csproj",
+        "packagesPath": "C:\\Users\\leand\\.nuget\\packages\\",
+        "outputPath": "C:\\Projetos\\NoobDoJonas\\ProjetoEtecVav\\TesteDeNumeros\\TesteDeNumeros\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
         "configFilePaths": [
-          "C:\\Users\\Jonas\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\leand\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -22,6 +27,7 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
