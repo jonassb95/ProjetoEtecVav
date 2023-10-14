@@ -2,7 +2,105 @@
     ViewData["Title"] = "Home Page";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+
+<div class="row mh-100">
+
+
+    <div class="text-center border col-10" style="min-height:25vh;">
+        <h1 class="display-4">MEGA-SENA</h1>
+        <p>Último concurso: 26/10/2023</p>
+        <p>Próximo concurso: 27/10/2023</p>
+        <p>Prêmio: <b>R$ 10,000</b></p>
+       @*  <div class="d-flex" id="numerosSorteados">
+                <p class="border border-danger rounded-circle " id="07">07</p>
+                <p class="border border-danger rounded-circle " id="17">17</p>
+                <p class="border border-danger rounded-circle " id="33">33</p>
+                <p class="border border-danger rounded-circle " id="36">36</p>
+                <p class="border border-danger rounded-circle " id="49">49</p>
+                <p class="border border-danger rounded-circle " id="52">52</p>
+        </div> *@
+    </div>
+
+    <div class="border border-warning col-5 h-50" id="resultados" style="min-height: 75vh;">
+        <h3>Ultimos Resultados</h3>
+        <div class="d-flex flex-row" id="Sorteio88">
+            
+            <p class="">Sorteio id (88) de (29/09/2023)</p>
+
+            <p class="border border-danger rounded-circle " id="07">07</p>
+            <p class="border border-danger rounded-circle " id="17">17</p>
+            <p class="border border-danger rounded-circle " id="33">33</p>
+            <p class="border border-danger rounded-circle " id="36">36</p>
+            <p class="border border-danger rounded-circle " id="49">49</p>
+            <p class="border border-danger rounded-circle " id="52">52</p>
+        </div>
+
+        <div class="d-flex flex-row" id="Sorteio78">
+
+            <p class="">Sorteio id (78) de (29/09/2023)</p>
+
+            <p class="border border-danger rounded-circle " id="07">07</p>
+            <p class="border border-danger rounded-circle " id="17">17</p>
+            <p class="border border-danger rounded-circle " id="33">33</p>
+            <p class="border border-danger rounded-circle " id="36">36</p>
+            <p class="border border-danger rounded-circle " id="49">49</p>
+            <p class="border border-danger rounded-circle " id="52">52</p>
+        </div>
+
+        <div class="d-flex flex-row" id="Sorteio129">
+
+            <p class="">Sorteio id (129) de (29/09/2023)</p>
+
+            <p class="border border-danger rounded-circle " id="07">07</p>
+            <p class="border border-danger rounded-circle " id="17">17</p>
+            <p class="border border-danger rounded-circle " id="33">33</p>
+            <p class="border border-danger rounded-circle " id="36">36</p>
+            <p class="border border-danger rounded-circle " id="49">49</p>
+            <p class="border border-danger rounded-circle " id="52">52</p>
+        </div>
+
+    </div>
+    <div class="border border-danger col-5 h-auto" id="numerosMaisSorteados">
+        <h3 class="">Números mais Sorteados</h3>
+        <div class="d-flex flex-row">
+            <p class="border border-danger rounded-circle ml-1" id="07">07</p>
+            <p>Saiu 30 vezes</p>
+        </div>
+        <div class="d-flex flex-row">
+            <p class="border border-danger rounded-circle ml-1" id="17">17</p>
+            <p>Saiu 56 vezes</p>
+        </div>
+    </div>
+
 </div>
+
+<script>
+    // Set the date we're counting down to
+    var countDownDate = new Date("Nov 5, 2023 15:37:25").getTime();
+
+    // Update the count down every 1 second
+    var x = setInterval(function () {
+
+        // Get today's date and time
+        var now = new Date().getTime();
+
+        // Find the distance between now and the count down date
+        var distance = countDownDate - now;
+
+        // Time calculations for days, hours, minutes and seconds
+        var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+        // Output the result in an element with id="demo"
+        document.getElementById("timer").innerHTML = days + "d " + hours + "h "
+            + minutes + "m " + seconds + "s ";
+
+        // If the count down is over, write some text
+        if (distance < 0) {
+            clearInterval(x);
+            document.getElementById("timer").innerHTML = "EXPIRED";
+        }
+    }, 1000);
+</script>
