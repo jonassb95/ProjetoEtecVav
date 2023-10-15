@@ -56,8 +56,11 @@ namespace Loto.Prize.Presentation.Areas.Identity.Pages.Account.Manage
             ///     directly from your code. This API may change or be removed in future releases.
             /// </summary>
             [Phone]
-            [Display(Name = "Phone number")]
+            [Display(Name = "Número do celular")]
             public string PhoneNumber { get; set; }
+
+            [Display(Name = "Nome de usuário")]
+            public string Username { get; set; }
         }
 
         private async Task LoadAsync(IdentityUser user)
@@ -100,18 +103,31 @@ namespace Loto.Prize.Presentation.Areas.Identity.Pages.Account.Manage
             }
 
             var phoneNumber = await _userManager.GetPhoneNumberAsync(user);
+            var username = await _userManager.GetUserNameAsync(user);
+
             if (Input.PhoneNumber != phoneNumber)
             {
                 var setPhoneResult = await _userManager.SetPhoneNumberAsync(user, Input.PhoneNumber);
                 if (!setPhoneResult.Succeeded)
                 {
-                    StatusMessage = "Unexpected error when trying to set phone number.";
+                    StatusMessage = "Erro inesperado ao tentar definir o número de telefone.";
                     return RedirectToPage();
                 }
             }
 
+            if (Input.Username != username)
+            {
+                var setUsername = await _userManager.SetUserNameAsync(user, Input.Username);
+                if (!setUsername.Succeeded)
+                {
+                    StatusMessage = "Erro inesperado ao tentar definir o nome do usuário.";
+                    return RedirectToPage();
+                }
+            }
+
+
             await _signInManager.RefreshSignInAsync(user);
-            StatusMessage = "Your profile has been updated";
+            StatusMessage = "Seu perfil foi atualizado";
             return RedirectToPage();
         }
     }
