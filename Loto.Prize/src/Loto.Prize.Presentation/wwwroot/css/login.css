@@ -1,1 +1,11 @@
 ﻿
+div.header-login {
+    background-image: url('../img/premio.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+div.div-email {
+    margin-bottom: 5px;
+}
