@@ -9,11 +9,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
 
-namespace Loto.Prize.Presentation.Data.Migrations
+namespace Loto.Prize.Presentation.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20231016031557_alterandoCampoRequirido2")]
-    partial class alterandoCampoRequirido2
+    [Migration("20231016041401_adicaoBancoNovo")]
+    partial class adicaoBancoNovo
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -68,11 +68,11 @@ namespace Loto.Prize.Presentation.Data.Migrations
                     b.Property<DateTime>("DataVolante")
                         .HasColumnType("datetime2");
 
-                    b.Property<int>("IdJogo")
-                        .HasColumnType("int");
+                    b.Property<Guid>("IdJogo")
+                        .HasColumnType("uniqueidentifier");
 
-                    b.Property<int>("IdUsuario")
-                        .HasColumnType("int");
+                    b.Property<Guid>("IdUsuario")
+                        .HasColumnType("uniqueidentifier");
 
                     b.Property<string>("NumerosEscolhidos")
                         .IsRequired()

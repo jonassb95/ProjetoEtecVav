@@ -8,7 +8,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
 
-namespace Loto.Prize.Presentation.Data.Migrations
+namespace Loto.Prize.Presentation.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
     partial class ApplicationDbContextModelSnapshot : ModelSnapshot
@@ -53,7 +53,7 @@ namespace Loto.Prize.Presentation.Data.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Jogo", (string)null);
+                    b.ToTable("Jogo");
                 });
 
             modelBuilder.Entity("Loto.Prize.Presentation.Models.VolanteModel", b =>
@@ -77,7 +77,7 @@ namespace Loto.Prize.Presentation.Data.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Volante", (string)null);
+                    b.ToTable("Volante");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRole", b =>

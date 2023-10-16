@@ -64,6 +64,7 @@ namespace Loto.Prize.Presentation.Controllers
             if (ModelState.IsValid)
             {
                 volanteModel.Id = Guid.NewGuid();
+                volanteModel.DataVolante = DateTime.Now;
                 _context.Add(volanteModel);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
