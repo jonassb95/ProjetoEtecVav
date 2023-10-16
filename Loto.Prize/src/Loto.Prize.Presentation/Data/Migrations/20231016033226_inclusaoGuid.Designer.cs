@@ -4,6 +4,7 @@ using Loto.Prize.Presentation.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Loto.Prize.Presentation.Data.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20231016033226_inclusaoGuid")]
+    partial class inclusaoGuid
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -53,7 +56,7 @@ namespace Loto.Prize.Presentation.Data.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Jogo", (string)null);
+                    b.ToTable("Jogo");
                 });
 
             modelBuilder.Entity("Loto.Prize.Presentation.Models.VolanteModel", b =>
@@ -77,7 +80,7 @@ namespace Loto.Prize.Presentation.Data.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Volante", (string)null);
+                    b.ToTable("Volante");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRole", b =>

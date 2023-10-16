@@ -28,7 +28,7 @@ namespace Loto.Prize.Presentation.Controllers
         [HttpPost]
         public IActionResult Criar(JogoModel jogo)
         {
-            if (!ModelState.IsValid)
+            if (ModelState.IsValid)
             {
                 jogo.DataCriacao = DateTime.Now;
                 jogo.NumerosSorteados = "03;12;17;26;36;47";
