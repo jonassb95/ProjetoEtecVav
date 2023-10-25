@@ -6,8 +6,7 @@
 var form1 = document.getElementById('form1');
 var boxJogos = document.getElementById('boxJogos');
 var btn_add = document.getElementById('add');
-var inputField = document.getElementById('inputField');
-const inputs = document.querySelectorAll('input[type="number"]');
+
 
 var count = 0;
 
@@ -19,16 +18,16 @@ while (i < qtdJogos) {
 	createNumber();
 }
 
-function createViewNumber(valor) {
-	// this.valor = valor;
-	var element = document.createElement('input');
-	element.setAttribute('type', 'number');
-	element.setAttribute('maxlenght', '1');
-	element.setAttribute('id', valor);
-	element.setAttribute('value', valor);
+//function createViewNumber(valor) {
+//	// this.valor = valor;
+//	var element = document.createElement('input');
+//	element.setAttribute('type', 'number');
+//	element.setAttribute('maxlenght', '1');
+//	element.setAttribute('id', valor);
+//	element.setAttribute('value', valor);
 	
-	inputField.appendChild(element);
-}
+//	inputField.appendChild(element);
+//}
 
 
 function createNumber() {
@@ -69,10 +68,10 @@ function gravarCheck(input) {
 
 			if (valor == "") {
 				valor = input.value;
-				createViewNumber(input.value);
+			/*	createViewNumber(input.value);*/
 			}
 			else {
-				createViewNumber(input.value);
+		/*		createViewNumber(input.value);*/
 				valor = valor + ";" + input.value;
 			}
 			document.getElementById("escolhidos").value = valor;
@@ -101,9 +100,9 @@ function gravarCheck(input) {
 			document.getElementById("escolhidos").value = teste;
 
 
-			var element = document.getElementById("inputField");
-			var child = document.getElementById(input.value);
-			element.removeChild(child);
+			//var element = document.getElementById("inputField");
+			//var child = document.getElementById(input.value);
+			//element.removeChild(child);
 
 			
 
