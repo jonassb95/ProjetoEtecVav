@@ -1,7 +1,12 @@
 ﻿using Loto.Prize.Presentation.Data;
 using Loto.Prize.Presentation.Models;
+using Microsoft.AspNetCore.Authentication.Cookies;
+using Microsoft.AspNetCore.Authentication;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
+using System.Security.Claims;
+using System.Security.Principal;
 
 namespace Loto.Prize.Presentation.Controllers
 {
@@ -16,6 +21,10 @@ namespace Loto.Prize.Presentation.Controllers
 
         public IActionResult Index()
         {
+            var admin = HttpContext.User.IsInRole("admin");
+
+            ViewBag.Admin = admin.ToString().ToLower();
+
             IEnumerable<JogoModel> jogos = _db.Jogo;
             return View(jogos);
         }

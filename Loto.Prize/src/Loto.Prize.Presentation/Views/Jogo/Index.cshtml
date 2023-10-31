@@ -8,7 +8,10 @@
 
     <div class="d-flex justify-content-between align-items-center mb-5">
         <h1>Jogos Criados</h1>
-        <a class="btn btn-success mx-2" asp-controller="Jogo" asp-action="Criar">Fazer novo Sorteio/Jogo</a>
+        @if (ViewBag.Admin == "true")
+        {
+            <a class="btn btn-success mx-2" asp-controller="Jogo" asp-action="Criar">Fazer novo Sorteio/Jogo</a>
+        }
     </div>
 
     <table class="table table-hover">
@@ -32,10 +35,13 @@
                         <th scope="row">@jogos.QuantidadeNumeroSelecao</th>
                         <th scope="col">@jogos.DataCriacao</th>
                         <th scope="row">@jogos.DataSorteio</th>
-                        <td>
-                            <a class="btn btn-warning mx-2" asp-controller="Jogo" asp-action="Editar" asp-route-id="@jogos.Id">Editar</a>
-                            <a class="btn btn-danger mx-2" asp-controller="Jogo" asp-action="Excluir" asp-route-id="@jogos.Id">Excluir</a>
-                        </td>
+                        @if (ViewBag.Admin == "true")
+                        {
+                            <td>
+                                <a class="btn btn-warning mx-2" asp-controller="Jogo" asp-action="Editar" asp-route-id="@jogos.Id">Editar</a>
+                                <a class="btn btn-danger mx-2" asp-controller="Jogo" asp-action="Excluir" asp-route-id="@jogos.Id">Excluir</a>
+                            </td>
+                        }
                     </tr>
                 }
             }

@@ -20,3 +20,17 @@ body {
 #logo-menu {
     width: 80%;
 }
+
+.resultado-loteria {
+    display: inline-block;
+    margin: 0 12px 0 0;
+    font-family: "FuturaWeb",sans-serif;
+    font-size: 2rem;
+    color: #fff;
+    background: #209869;
+    border-radius: 35px;
+    width: 67px;
+    height: 67px;
+    padding: 10px 0;
+    text-align: center;
+}
