@@ -475,3 +475,4 @@ $RECYCLE.BIN/
 
 # Windows shortcuts
 *.lnk
+/Loto.Prize/src/Loto.Prize.Presentation/Controllers/VolanteController.cs
