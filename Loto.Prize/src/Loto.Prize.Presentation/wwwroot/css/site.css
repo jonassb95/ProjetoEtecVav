@@ -34,3 +34,21 @@ body {
     padding: 10px 0;
     text-align: center;
 }
+
+.numero-escolhido {
+    display: inline-block;
+    margin: 0 12px 0 0;
+    font-family: "FuturaWeb",sans-serif;
+    font-size: 1.3rem;
+    color: #fff;
+    background: #209869;
+    border-radius: 35px;
+    width: 37px;
+    height: 37px;
+    padding: 2px;
+    text-align: center;
+}
+
+.sorteio-resultado {
+
+}

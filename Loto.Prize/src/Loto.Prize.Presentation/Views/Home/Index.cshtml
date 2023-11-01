@@ -1,42 +1,53 @@
 ﻿@model JogoModel
 @{
-    ViewData["Title"] = "Home Page";
+    ViewData["Title"] = "Home";
 }
 
 
 
 <div class="row mh-100">
-    <div class="text-center border col-10" style="min-height:25vh;">
-        <h1 class="display-4">MEGA-SENA</h1>
+    <div class="border col-10" style="min-height:75vh;">
+
+        @if (Model != null)
+        {
+            <div class="border border-warning h-100" id="sorteio-resultado">
+                <div class="border border-warning bg-success" id="infoCabecalho">
+                    <div class="d-flex flex-column" id="infoStatus">
+                        <p class="text-light m-1">Data de sorteio <strong>@Model.DataSorteio.ToString("dd/MM/yyyy")</strong></p>
+                        <h2 class="text-warning fw-bold m-2">@Model.Nome.ToUpper()</h2>
+                    </div>
+                    <div class="bg-success text-light " id="infoPremio">
+                        <h3>Premio @Model.Premio</h3>
+                    </div>
+                </div>
+                <div class="position-absolute bottom-50 end-50" id="numerosSorteados">
+                    <div class="d-flex flex-row" id="Sorteio88">
+                        @foreach (var numero in Model.NumerosSorteados.Split(";").ToList())
+                        {
+                            <p class="resultado-loteria">@numero</p>
+                        }
+                        
+                    </div>
+                </div>
+                <div class="row">
+
+                </div>
+            </div>
+        }
+        else
+        {
+            <h2>Sem resultado</h2>
+        }
     </div>
-    <div class="border border-warning col-5 h-50" id="resultados" style="min-height: 75vh;">
-        <h3>Ultimos Resultados</h3>
-        <p>Data de sorteio <strong>@Model.DataSorteio.ToString("dd/MM/yyyy")</strong></p>
-        <h2>Premio @Model.Premio</h2>
-        <div class="d-flex flex-row" id="Sorteio88">
-            @if (Model != null)
-            {
-                @foreach (var numero in Model.NumerosSorteados.Split(";").ToList())
-                {
-                    <p class="resultado-loteria">@numero</p>
-                }
-            }
+            <div class="border border-warning col-5 h-50" id="resultados" style="min-height: 25vh;">
+                <h3>Como Jogar</h3>
+
+            </div>
+
+            <div class="border border-danger col-5 h-auto" id="numerosMaisSorteados">
+                <h3 class="">Faça sua Aposta!</h3>
+        <div class="d-flex flex-row ">
+            <a class="nav-link text-light btn bg-success" asp-area="" asp-controller="Volante" asp-action="Create">Faça sua aposta</a>
+                </div>
+            </div>
         </div>
-    </div>
-    <div class="border border-danger col-5 h-auto" id="numerosMaisSorteados">
-        <h3 class="">Novo Jogo!</h3>
-        <div class="d-flex flex-row">
-            <a asp-controller="Volante" asp-action="Create">Crie seu novo jogo!</a>
-        </div>
-    </div>
-</div>
-<div class="row border border-warning col-4">
-    <div class="col-sm border border-warning">
-        One of three columns
-    </div>
-</div>
-<div class="row border border-warning col-4">
-    <div class="col-sm border border-warning">
-        One of three columns
-    </div>
-</div>

@@ -74,7 +74,7 @@ namespace Loto.Prize.Presentation.Areas.Identity.Pages.Account
             ///     This API supports the ASP.NET Core Identity default UI infrastructure and is not intended to be used
             ///     directly from your code. This API may change or be removed in future releases.
             /// </summary>
-            [Required]
+            [Required(ErrorMessage = "E-mail é necessário")]
             [EmailAddress]
             [Display(Name = "Email")]
             public string Email { get; set; }
@@ -95,7 +95,7 @@ namespace Loto.Prize.Presentation.Areas.Identity.Pages.Account
             /// </summary>
             [DataType(DataType.Password)]
             [Display(Name = "Confirme sua senha")]
-            [Compare("Password", ErrorMessage = "A senha e a senha de confirmação não coincidem.")]
+            [Compare("Password", ErrorMessage = "As senhas não correspondem.")]
             public string ConfirmPassword { get; set; }
         }
 
