@@ -4,49 +4,150 @@
     ViewData["Title"] = "Create";
 }
 
-<h1>Create</h1>
-
-<h4>VolanteModel</h4>
-<hr />
-<div class="row">
-    <div class="col-md-4">
+<div class="row ">
+    <div class="col-md-5">
         <form asp-action="Create">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-            <div class="form-group">
-                <label asp-for="IdUsuario" class="control-label"></label>
-                <input asp-for="IdUsuario" class="form-control" />
-                <span asp-validation-for="IdUsuario" class="text-danger"></span>
-            </div>
-            <div class="form-group">
+            <div class="form-group" hidden>
                 <label asp-for="IdJogo" class="control-label"></label>
-                <input asp-for="IdJogo" class="form-control" />
+                <input asp-for="IdJogo" class="form-control" value="@ViewBag.Jogo.Id" />
                 <span asp-validation-for="IdJogo" class="text-danger"></span>
             </div>
 
-            <div class="form-group">
+            <div class="form-group" hidden>
                 <label asp-for="NumerosEscolhidos" class="control-label"></label>
-                <input asp-for="NumerosEscolhidos" type="text" id="NumerosEscolhidos" name="NumerosEscolhidos" value="" hidden>
+                <input asp-for="NumerosEscolhidos" type="text" id="NumerosEscolhidos" name="NumerosEscolhidos" value="">
                 <span asp-validation-for="NumerosEscolhidos" class="text-danger"></span>
             </div>
-            <div id="boxJogos" class="form-group boxJogos" style="width: 60%;">
-              
-        <!-- Onde os números são criados conforme a necessidade. -->
-                
-               
-          </div>
-                
-            
+
+            <div class="form-group" style="border-radius: 3px">
+                <div class="form-group lbl-aposta">Faça sua aposta | @ViewBag.Jogo.Nome</div>
+                <div id="boxJogos" class="form-group boxJogos" style="">
+
+                    <!-- Onde os números são criados conforme a necessidade. -->
+
+                </div>
+            </div>
+
+            <hr />
             <div class="form-group">
-                <input type="submit" value="Create" class="btn btn-primary" />
+                <div class="d-grid gap-2">
+                    <input type="submit" value="Criar jogo" class="btn btn-block btn-criar" />
+                </div>
+                <div class="d-grid gap-2">
+                    <button class="btn btn-primary" asp-action="Index">Veja suas apostas!</button>
+                </div>
             </div>
         </form>
     </div>
-</div>
-
-<div>
-    <a asp-action="Index">Back to List</a>
+    <div class="col-md-7">
+        <div class="col-12">
+            <h1 class="text-center">Faça seu jogo.</h1>
+            <h2 class="text-center">O prêmio é de <strong>R$@ViewBag.Jogo.Premio Reais</strong></h2>
+            <h3 class="text-center">Data sorteio: @ViewBag.Jogo.DataSorteio</h3>
+            <p></p>
+        </div>
+    </div>
 </div>
 
 @section Scripts {
-    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+    <link href="~/css/volante-create.css" rel="stylesheet" />
 }
+
+<script>
+    var form1 = document.getElementById('form1');
+    var boxJogos = document.getElementById('boxJogos');
+    var btn_add = document.getElementById('add');
+    var inputField = document.getElementById('inputField');
+    const inputs = document.querySelectorAll('input[type="number"]');
+
+    var count = 0;
+
+    var qtdJogos = @ViewBag.Jogo.TotalNumero;
+    var i = 0;
+
+    while (i < qtdJogos) {
+        i++
+        createNumber();
+    } function createNumber() {
+        var element = document.createElement('input');
+        element.setAttribute('type', 'checkbox');
+        element.setAttribute('class', 'btn-check rounded-5');
+        element.setAttribute('id', 'btn-check-' + i);
+        element.setAttribute('value', '' + i);
+        element.setAttribute('autocomplete', 'off');
+        element.setAttribute('onclick', 'gravarCheck(this)')
+
+        boxJogos.appendChild(element);
+
+        // Label do checkbox
+
+        var element1 = document.createElement('label');
+        element1.setAttribute('class', 'btn lbl-escolha rounded-5');
+        element1.setAttribute('id', 'lbl-escolha-' + i);
+        element1.setAttribute('for', 'btn-check-' + i);
+        if (i < 10) {
+            element1.textContent = "0" + i;
+        }
+        else {
+            element1.textContent = i;
+        }
+
+
+        boxJogos.appendChild(element1);
+    }
+
+    function gravarCheck(input) {
+        var result = input.checked;
+        var valor = document.getElementById("NumerosEscolhidos").value;
+
+        if (count <= 5) {
+            if (result) {
+                count++;
+                input.checked = true;
+
+                if (valor == "") {
+                    valor = input.value;
+                    /*createViewNumber(input.value);*/
+                }
+                else {
+                    /*createViewNumber(input.value);*/
+                    valor = valor + ";" + input.value;
+                }
+                document.getElementById("NumerosEscolhidos").value = valor;
+
+                document.getElementById("lbl-escolha-" + input.value).setAttribute('class', 'btn rounded-5 numero-volante-escolhido ');
+
+                //input.parentElement.setAttribute('class', ' numero-volante-escolhido ');
+            }
+        }
+        else if (result) {
+            console.log("Quantidade total de números já escolhidos. Escolha novos números removendo outro número.");
+            input.checked = false;
+        }
+
+        if (!result) {
+            count--;
+            input.checked = false;
+            var teste = document.getElementById("NumerosEscolhidos").value;
+
+            if (teste.includes(input.value)) {
+                if (teste.includes(input.value + ";")) {
+                    teste = teste.replace(input.value + ";", '');
+                }
+                else if (teste.includes(";" + input.value)) {
+                    teste = teste.replace(";" + input.value, '');
+                }
+                else {
+                    teste = teste.replace(input.value, '');
+                }
+                document.getElementById("NumerosEscolhidos").value = teste;
+
+                document.getElementById("lbl-escolha-" + input.value).setAttribute('class', 'btn rounded-5');
+            }
+        }
+    }
+</script>

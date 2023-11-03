@@ -30,7 +30,7 @@ while (i < qtdJogos) {
 //	inputField.appendChild(element);
 //}
 
-
+/*
 function createNumber() {
 	var element = document.createElement('input');
 	element.setAttribute('type', 'checkbox');
@@ -69,10 +69,10 @@ function gravarCheck(input) {
 
 			if (valor == "") {
 				valor = input.value;
-				/*createViewNumber(input.value);*/
+				//createViewNumber(input.value);
 			}
 			else {
-				/*createViewNumber(input.value);*/
+				//createViewNumber(input.value);
 				valor = valor + ";" + input.value;
 			}
 			document.getElementById("NumerosEscolhidos").value = valor;
@@ -110,7 +110,7 @@ function gravarCheck(input) {
 
 		}
 	}
-}
+}*/
 
 //function gravarCheck(input) {
 //	var result = input.checked;

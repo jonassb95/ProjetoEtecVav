@@ -8,10 +8,11 @@ using Microsoft.EntityFrameworkCore;
 using Loto.Prize.Presentation.Data;
 using Loto.Prize.Presentation.Models;
 using Microsoft.AspNetCore.Authorization;
+using Loto.Prize.Domain.Entity;
 
 namespace Loto.Prize.Presentation.Controllers
 {
-    
+
     public class VolanteController : Controller
     {
         private readonly ApplicationDbContext _context;
@@ -24,9 +25,9 @@ namespace Loto.Prize.Presentation.Controllers
         // GET: Volante
         public async Task<IActionResult> Index()
         {
-              return _context.Volante != null ? 
-                          View(await _context.Volante.ToListAsync()) :
-                          Problem("Entity set 'ApplicationDbContext.Volante'  is null.");
+            return _context.Volante != null ?
+                        View(await _context.Volante.ToListAsync()) :
+                        Problem("Entity set 'ApplicationDbContext.Volante'  is null.");
         }
 
         // GET: Volante/Details/5
@@ -51,6 +52,13 @@ namespace Loto.Prize.Presentation.Controllers
         [Authorize]
         public IActionResult Create()
         {
+            ViewBag.Jogo = _context.Jogo.FirstOrDefault(x => x.NumerosSorteados == null);
+
+            if (ViewBag.Jogo == null)
+            {
+                // Sem jogos a serem jogados.
+            }
+
             return View();
         }
 
@@ -74,7 +82,7 @@ namespace Loto.Prize.Presentation.Controllers
 
         private bool VolanteModelExists(Guid id)
         {
-          return (_context.Volante?.Any(e => e.Id == id)).GetValueOrDefault();
+            return (_context.Volante?.Any(e => e.Id == id)).GetValueOrDefault();
         }
     }
 }

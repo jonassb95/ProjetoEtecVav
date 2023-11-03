@@ -1,0 +1,37 @@
+﻿body {
+    background-image: url('../img/festa.png');
+}
+
+.boxJogos {
+    background-color: rgb(251, 247, 229);
+    padding: 14px;
+}
+
+.numero-volante-escolhido {
+    background: #209869;
+    color: #fff;
+    border-radius: 100%;
+}
+
+.numero-volante-escolhido:hover {
+    color: white;
+}
+
+.lbl-aposta {
+    background: rgb(140, 114, 214);
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+    color: white;
+    font-weight: bold;
+    padding-left: 5px;
+}
+
+.btn-criar {
+    background-color: #209869;
+    color: white;
+}
+
+.btn-criar:hover {
+    background-color: #2bc287;
+    color: white;
+}

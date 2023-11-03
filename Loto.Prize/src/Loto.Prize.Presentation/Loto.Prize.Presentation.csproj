@@ -30,4 +30,8 @@
     <Folder Include="wwwroot\img\" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Loto.Prize.Domain\Loto.Prize.Domain.csproj" />
+  </ItemGroup>
+
 </Project>
