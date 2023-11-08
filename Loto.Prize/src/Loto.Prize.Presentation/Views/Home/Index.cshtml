@@ -5,32 +5,71 @@
 
 
 
-<div class="row mh-100">
-    <div class="border col-10" style="min-height:75vh;">
+<div class="row">
+    <div class="col-10" style="min-height:75vh;">
 
         @if (Model != null)
         {
-            <div class="border border-warning h-100" id="sorteio-resultado">
-                <div class="border border-warning bg-success" id="infoCabecalho">
+            <div class="border-radius h-100 rounded-5" id="sorteio-resultado">
+                <div class="bg-success rounded" id="infoCabecalho">
                     <div class="d-flex flex-column" id="infoStatus">
                         <p class="text-light m-1">Data de sorteio <strong>@Model.DataSorteio.ToString("dd/MM/yyyy")</strong></p>
                         <h2 class="text-warning fw-bold m-2">@Model.Nome.ToUpper()</h2>
                     </div>
-                    <div class="bg-success text-light " id="infoPremio">
+                    <div class="bg-success text-light" id="infoPremio">
                         <h3>Premio @Model.Premio</h3>
                     </div>
                 </div>
-                <div class="position-absolute bottom-50 end-50" id="numerosSorteados">
-                    <div class="d-flex flex-row" id="Sorteio88">
+                <div class="d-flex flex-column justify-content-center" id="numerosSorteados">
+                    <div class="d-flex flex-row justify-content-center my-5" id="Sorteio88">
                         @foreach (var numero in Model.NumerosSorteados.Split(";").ToList())
                         {
                             <p class="resultado-loteria">@numero</p>
                         }
-                        
+                    </div>
+                    <div class="w-50 text-center d-flex justify-content-center" id="proxSorteio">
+                        <p class="bg-secondary">
+                            @if (ViewBag.Jogo != null)
+                            {
+                                <p class="bg-secondary m-1">Próximo sorteio, @ViewBag.Jogo.DataSorteio.DayOfWeek, @ViewBag.Jogo.DataSorteio.ToString("dd/MM/yyyy")</p>
+                            }
+                            else
+                            {
+                                <p>Sem sorteios futuros</p>
+                            }
+                        </p>
                     </div>
                 </div>
-                <div class="row">
-
+                <div class="d-flex justify-content-center">
+                    <div class="col-12 border-bottom w-75 d-flex"></div>
+                </div>
+                <div class="text-center mt-5">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th scope="col">Faixa</th>
+                                <th scope ="col">Ganhadores</th>
+                                <th scope="col">Prêmio</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row">Sena</th>
+                                <td>0</td>
+                                <td>0</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Quina</th>
+                                <td>136</td>
+                                <td>R$ 44,3 Mil</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Quadra</th>
+                                <td>7564</td>
+                                <td>R$ 1,14 Mil</td>
+                            </tr>
+                            </tbody>
+                        </table>
                 </div>
             </div>
         }
@@ -39,15 +78,15 @@
             <h2>Sem resultado</h2>
         }
     </div>
-            <div class="border border-warning col-5 h-50" id="resultados" style="min-height: 25vh;">
-                <h3>Como Jogar</h3>
-
-            </div>
-
-            <div class="border border-danger col-5 h-auto" id="numerosMaisSorteados">
-                <h3 class="">Faça sua Aposta!</h3>
-        <div class="d-flex flex-row ">
+    <div class="col-5 h-50 text-center" id="resultados" style="min-height: 25vh;">
+        <h3>Como Jogar</h3>
+        <p>A Lotoprize é a maior loterica da EtecVav criada em 2023 com o intuito de fazer novos ricaços, rsrs para jogar basta criar sua conta e fazer sua aposta, temos sorteios diários e todo dia temos novos sortudos(a).</p>
+    </div>
+    <div class="col-5 h-auto text-center align-content-center" id="numerosMaisSorteados">
+        <h3 class="">Faça sua Aposta!</h3>
+        <div class="text-center mt-4">
             <a class="nav-link text-light btn bg-success" asp-area="" asp-controller="Volante" asp-action="Create">Faça sua aposta</a>
-                </div>
-            </div>
         </div>
+    </div>
+</div>
+
