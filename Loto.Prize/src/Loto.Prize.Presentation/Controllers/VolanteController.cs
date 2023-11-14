@@ -54,7 +54,7 @@ namespace Loto.Prize.Presentation.Controllers
         [Authorize]
         public IActionResult Create()
         {
-            ViewBag.Jogo = _context.Jogo.FirstOrDefault(x => x.NumerosSorteados == null);
+            ViewBag.Jogo = _context.Jogo.OrderByDescending(x => x.DataSorteio).FirstOrDefault(x => x.NumerosSorteados == null);
 
             if (ViewBag.Jogo == null)
             {

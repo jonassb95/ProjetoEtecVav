@@ -20,6 +20,13 @@ namespace Loto.Prize.Presentation.Controllers
         public IActionResult Index()
         {
             var jogo = _context.Jogo.OrderByDescending(x => x.DataSorteio).FirstOrDefault(x => x.NumerosSorteados != null);
+            ViewBag.Jogo = _context.Jogo.OrderByDescending(x => x.DataSorteio).FirstOrDefault(x => x.NumerosSorteados == null);
+            
+            if (ViewBag.Jogo == null)
+            {
+                // Sem jogos a serem jogados.
+            }
+
             return View(jogo);
         }
 
