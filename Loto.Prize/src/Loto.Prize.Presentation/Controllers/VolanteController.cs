@@ -9,6 +9,8 @@ using Loto.Prize.Presentation.Data;
 using Loto.Prize.Presentation.Models;
 using Microsoft.AspNetCore.Authorization;
 using Loto.Prize.Domain.Entity;
+using Microsoft.AspNetCore.Http;
+using System.Security.Claims;
 
 namespace Loto.Prize.Presentation.Controllers
 {
@@ -23,11 +25,11 @@ namespace Loto.Prize.Presentation.Controllers
         }
 
         // GET: Volante
+        [Authorize]
         public async Task<IActionResult> Index()
         {
-            return _context.Volante != null ?
-                        View(await _context.Volante.ToListAsync()) :
-                        Problem("Entity set 'ApplicationDbContext.Volante'  is null.");
+            var volante = _context.Volante.Where(x=>x.IdUsuario == Guid.Parse(HttpContext.User.FindFirstValue(ClaimTypes.NameIdentifier))).ToList();
+            return View(volante);
         }
 
         // GET: Volante/Details/5
@@ -67,12 +69,15 @@ namespace Loto.Prize.Presentation.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [Authorize]
         public async Task<IActionResult> Create([Bind("Id,IdUsuario,IdJogo,NumerosEscolhidos,DataVolante")] VolanteModel volanteModel)
         {
             if (ModelState.IsValid)
             {
                 volanteModel.Id = Guid.NewGuid();
+                volanteModel.IdUsuario = Guid.Parse(HttpContext.User.FindFirstValue(ClaimTypes.NameIdentifier));
                 volanteModel.DataVolante = DateTime.Now;
+
                 _context.Add(volanteModel);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
