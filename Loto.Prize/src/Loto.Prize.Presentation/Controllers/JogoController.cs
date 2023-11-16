@@ -8,6 +8,7 @@ using System.Diagnostics;
 using System.Security.Claims;
 using System.Security.Principal;
 using Microsoft.IdentityModel.Tokens;
+using Microsoft.EntityFrameworkCore;
 
 namespace Loto.Prize.Presentation.Controllers
 {
@@ -50,25 +51,57 @@ namespace Loto.Prize.Presentation.Controllers
             return View();
         }
 
-        public IActionResult Sortear(JogoModel jogo) 
-        { 
+        public IActionResult Sortear()
+        {
             /*  
                 Sortear 6 números aleatórios entre 01 a 60
                 6 números diferentes.
                 
              */
-            
 
-            if (jogo.NumerosSorteados == "")
+            var listaNumerosSorteados = "";
+
+            for (int i = 0; i < 6;)
             {
-                for (int i = 0; i < jogo.QuantidadeNumeroSelecao; i++) 
+                var numeroSorteado = new Random().Next(1, 60);
+
+                if (!listaNumerosSorteados.Contains(numeroSorteado.ToString()))
                 {
-                   
+                    if (listaNumerosSorteados.IsNullOrEmpty())
+                        listaNumerosSorteados = numeroSorteado.ToString();
+                    else
+                        listaNumerosSorteados += $";{numeroSorteado}";
+
+                    i++;
                 }
             }
+
+            var jogo = _db.Jogo.OrderByDescending(x => x.DataSorteio).FirstOrDefault(x => x.NumerosSorteados != null);
+
+            jogo.NumerosSorteados = listaNumerosSorteados;
+            jogo.DataSorteio = DateTime.Now;
+
+            _db.Add(jogo);
+
+            CriarNovoJogo();
+
+            _db.SaveChanges();
+
             return RedirectToAction("Index", "Home");
         }
 
+        private void CriarNovoJogo()
+        {
+            var novoJogo = new JogoModel();
+            novoJogo.Id = Guid.NewGuid();
+            novoJogo.TotalNumero = 60;
+            novoJogo.DataCriacao = DateTime.Now;
+            novoJogo.QuantidadeNumeroSelecao = 6;
+            novoJogo.Nome = "Mega-Sena";
+            novoJogo.Premio = "Surpresa";
+
+            _db.Add(novoJogo);
+        }
 
         public IActionResult validarGannhador()
         {
