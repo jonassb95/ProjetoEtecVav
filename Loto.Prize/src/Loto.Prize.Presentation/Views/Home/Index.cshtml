@@ -47,12 +47,12 @@
                     <table class="table">
                         <thead>
                             <tr>
-                                <th scope="col">Faixa</th>
-                                <th scope ="col">Ganhadores</th>
-                                <th scope="col">Prêmio</th>
+                                <th scope="col">Participantes</th>
+                                <th scope ="col">Números Escolhidos</th>
+                                <th scope="col">Acertos</th>
                             </tr>
                         </thead>
-                        <tbody>
+                        <tbody id="participantes"> 
                             <tr>
                                 <th scope="row">Sena</th>
                                 <td>0</td>
@@ -90,3 +90,19 @@
     </div>
 </div>
 
+@* `<script>
+     var boxParticipantes = document.getElementById('participantes');
+     
+     function createParticipante() {
+         var element = document.createElement('tr');
+         element.setAttribute('id', 'NomeParticipante');
+         boxParticipantes.appendChild(element);
+
+         // Label do checkbox
+         var nomeParticipantes = document.getElementById('NomeParticipannte');
+         var element1 = document.createElement('th');
+         element1.setAttribute('value', 'Teste');
+
+         boxJogos.appendChild(element1);
+     }
+</script> *@

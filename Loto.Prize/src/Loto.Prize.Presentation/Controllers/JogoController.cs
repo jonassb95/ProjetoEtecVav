@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
 using System.Security.Claims;
 using System.Security.Principal;
+using Microsoft.IdentityModel.Tokens;
 
 namespace Loto.Prize.Presentation.Controllers
 {
@@ -48,6 +49,32 @@ namespace Loto.Prize.Presentation.Controllers
 
             return View();
         }
+
+        public IActionResult Sortear(JogoModel jogo) 
+        { 
+            /*  
+                Sortear 6 números aleatórios entre 01 a 60
+                6 números diferentes.
+                
+             */
+            
+
+            if (jogo.NumerosSorteados == "")
+            {
+                for (int i = 0; i < jogo.QuantidadeNumeroSelecao; i++) 
+                {
+                   
+                }
+            }
+            return RedirectToAction("Index", "Home");
+        }
+
+
+        public IActionResult validarGannhador()
+        {
+            return View();
+        }
+
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()

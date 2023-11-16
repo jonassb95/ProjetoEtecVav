@@ -41,12 +41,19 @@
         </form>
     </div>
     <div class="col-md-7">
-        <div class="col-12">
-            <h1 class="text-center">Faça seu jogo.</h1>
-            <h2 class="text-center">O prêmio é de <strong>R$@ViewBag.Jogo.Premio Reais</strong></h2>
-            <h3 class="text-center">Data sorteio: @ViewBag.Jogo.DataSorteio</h3>
-            <p></p>
-        </div>
+        <form>
+            <div class="col-12">
+                <h1 class="text-center">Faça seu jogo.</h1>
+                <h2 class="text-center">O prêmio é de <strong>R$@ViewBag.Jogo.Premio Reais</strong></h2>
+                <h3 class="text-center">Data sorteio: @ViewBag.Jogo.DataSorteio</h3>
+                <p></p>
+            
+                <div class="d-grid gap-2">
+                    <button class="btn btn-primary" asp-controller="Jogo" asp-action="Sortear">Fazer Sorteio</button>
+                </div>
+            
+            </div>
+        </form>
     </div>
 </div>
 
