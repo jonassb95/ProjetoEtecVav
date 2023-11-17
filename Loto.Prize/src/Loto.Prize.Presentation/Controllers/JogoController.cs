@@ -9,6 +9,8 @@ using System.Security.Claims;
 using System.Security.Principal;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.EntityFrameworkCore;
+using static System.Runtime.InteropServices.JavaScript.JSType;
+using Microsoft.EntityFrameworkCore.Metadata.Internal;
 
 namespace Loto.Prize.Presentation.Controllers
 {
@@ -51,6 +53,64 @@ namespace Loto.Prize.Presentation.Controllers
             return View();
         }
 
+        public IActionResult Editar(Guid id)
+        {
+            if (id == null || id.Equals(0))
+            {
+                return NotFound();
+            }
+
+            JogoModel jogo = _db.Jogo.FirstOrDefault(x => x.Id == id);
+
+            if (jogo == null)
+            {
+                return NotFound();
+            }
+
+            return View(jogo);
+        }
+
+        [HttpPost]
+        public IActionResult Editar(JogoModel jogo)
+        {
+            if (ModelState.IsValid)
+            {
+                _db.Jogo.Update(jogo);
+                _db.SaveChanges();
+            }
+            return RedirectToAction("Index");
+        }
+
+        public  IActionResult Excluir(Guid id)
+        {
+            if (id == null || id.Equals(0))
+            {
+                return NotFound();
+            }
+
+            JogoModel jogo = _db.Jogo.FirstOrDefault(x => x.Id == id);
+
+            if (jogo == null)
+            {
+                return NotFound();
+            }
+
+            return View(jogo);
+        }
+
+        [HttpPost]
+        public IActionResult Excluir(JogoModel jogo)
+        {
+            if(jogo == null)
+            {
+                return NotFound();
+            }
+
+            _db.Jogo.Remove(jogo);
+            _db.SaveChanges();
+
+            return RedirectToAction("Index");
+        }
         public IActionResult Sortear()
         {
             /*  
@@ -76,7 +136,8 @@ namespace Loto.Prize.Presentation.Controllers
                 }
             }
 
-            var jogo = _db.Jogo.OrderByDescending(x => x.DataSorteio).FirstOrDefault(x => x.NumerosSorteados != null);
+            
+            var jogo = _db.Jogo.OrderByDescending(x => x.DataSorteio).FirstOrDefault(x => x.NumerosSorteados == null);
 
             jogo.NumerosSorteados = listaNumerosSorteados;
             jogo.DataSorteio = DateTime.Now;
@@ -85,8 +146,8 @@ namespace Loto.Prize.Presentation.Controllers
 
             CriarNovoJogo();
 
+            _db.Update(jogo);
             _db.SaveChanges();
-
             return RedirectToAction("Index", "Home");
         }
 
@@ -103,10 +164,18 @@ namespace Loto.Prize.Presentation.Controllers
             _db.Add(novoJogo);
         }
 
-        public IActionResult validarGannhador()
+        public IActionResult Listar()
         {
+            ViewBag.Volante = _db.Volante.OrderByDescending(x => x.NomeParticipante).FirstOrDefault(x => x.NumerosEscolhidos != null);
+
+            if (ViewBag.Volante == null)
+            {
+                // Sem jogos a serem jogados.
+            }
+
             return View();
         }
+
 
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]

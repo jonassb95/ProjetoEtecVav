@@ -44,32 +44,36 @@
                     <div class="col-12 border-bottom w-75 d-flex"></div>
                 </div>
                 <div class="text-center mt-5">
-                    <table class="table">
-                        <thead>
-                            <tr>
-                                <th scope="col">Participantes</th>
-                                <th scope ="col">Números Escolhidos</th>
-                                <th scope="col">Acertos</th>
-                            </tr>
-                        </thead>
-                        <tbody id="participantes"> 
-                            <tr>
-                                <th scope="row">Sena</th>
-                                <td>0</td>
-                                <td>0</td>
-                            </tr>
-                            <tr>
-                                <th scope="row">Quina</th>
-                                <td>136</td>
-                                <td>R$ 44,3 Mil</td>
-                            </tr>
-                            <tr>
-                                <th scope="row">Quadra</th>
-                                <td>7564</td>
-                                <td>R$ 1,14 Mil</td>
-                            </tr>
-                            </tbody>
-                        </table>
+                    @if (ViewBag.Volante != null)
+                    {
+                        foreach (var vol in ViewBag.Volante)
+                        {
+                            <h4>Participante: @vol.NomeParticipante</h4>
+                            <p>Números Escolhidos:</p>
+                            @foreach (var numeroEscolhido in vol.NumerosEscolhidos.Split(";"))
+                            {
+                                <p class="numero-escolhido">@numeroEscolhido</p>
+                            }
+
+                            <p>Comparação com Números Sorteados:</p>
+                            @foreach (var numeroSorteado in Model.NumerosSorteados.Split(";"))
+                            {
+                                if (vol.NumerosEscolhidos.Split(";").Contains(numeroSorteado))
+                                {
+                                    <p class="text-success">@numeroSorteado</p>
+                                    var acertos = +1;
+                                }
+                                else
+                                {
+                                    <p class="text-danger">@numeroSorteado</p>
+                                }
+                            }
+                        }
+                    }
+                    else
+                    {
+                        <p>Sem participantes</p>
+                    }  
                 </div>
             </div>
         }
@@ -90,19 +94,36 @@
     </div>
 </div>
 
-@* `<script>
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+
+}
+
+
+`<script>
      var boxParticipantes = document.getElementById('participantes');
-     
+    var i = 0;
+    while (i < 3) {
+        i++
+         createParticipante();
+    }
+
      function createParticipante() {
          var element = document.createElement('tr');
-         element.setAttribute('id', 'NomeParticipante');
          boxParticipantes.appendChild(element);
 
-         // Label do checkbox
-         var nomeParticipantes = document.getElementById('NomeParticipannte');
          var element1 = document.createElement('th');
-         element1.setAttribute('value', 'Teste');
+         element1.setAttribute('value', 'Leandrinnnho');
+         element.appendChild(element1);
 
-         boxJogos.appendChild(element1);
+         var element2 = document.createElement('td');
+         element2setAttribute('value', '01,02,03,04,06,08');
+         element.appendChild(element2);
+
+         var element3 = document.createElement('td');
+         element3.setAttribute('value', '0 Acertos');
+         element.appendChild(element3);
      }
-</script> *@
+</script>

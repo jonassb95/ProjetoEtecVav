@@ -19,9 +19,10 @@
             <th>
                 @Html.DisplayNameFor(model => model.IdJogo)
             </th>  *@
+            <th>Nome Participante</th>
             <th>Números escolhidos</th>
             <th>Data da aposta</th>
-            <th></th>
+           
         </tr>
     </thead>
     <tbody>
@@ -30,10 +31,10 @@
             <tr>
 @*              <td>
                 @Html.DisplayFor(modelItem => item.IdUsuario)
-            </td>
+            </td>*@
             <td>
-                @Html.DisplayFor(modelItem => item.IdJogo)
-            </td>  *@
+                @Html.DisplayFor(modelItem => item.NomeParticipante)
+            </td>  
 
                 <td>
                     @foreach (var numero in item.NumerosEscolhidos.Split(";").ToList())

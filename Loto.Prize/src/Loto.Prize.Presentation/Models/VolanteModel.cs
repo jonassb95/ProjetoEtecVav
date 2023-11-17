@@ -6,6 +6,7 @@
         public Guid IdUsuario { get; set; }
         public Guid IdJogo { get; set; }
         public string NumerosEscolhidos { get; set; }
+        public string NomeParticipante { get; set; }
         public DateTime DataVolante { get; set; }
     }
 }

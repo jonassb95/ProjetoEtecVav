@@ -1,0 +1,43 @@
+﻿@model JogoModel
+
+
+@{
+    ViewData["title"] = "Cancelar Sorteio";
+}
+
+
+<form method="post" asp-controller="Jogo" asp-action="Excluir">
+    <input type="hidden" asp-for=Id />
+
+    <h2>Tem certeza que deseja cancelar o Sorteio abaixo?</h2>
+
+    <div class="form-group">
+        <label for="nomeSorteio">Nome Sorteio</label>
+        <input type="text" asp-for="Nome" class="form-control" id="nomeSorteio" placeholder="Qual o nome do Sorteio">
+    </div>
+
+    <div class="form-row">
+        <div class="form-group col-md-6">
+            <label for="TotalNumero">Total de números</label>
+            <input type="number" asp-for="TotalNumero" maxlength="1000" class="form-control" id="TotalNumero" placeholder="Quantidade de números para o sorteio" disabled>
+        </div>
+
+        <div class="form-group col-md-6">
+            <label for="QuantidadeNumeroSelecao">Minimo de números para Jogar</label>
+            <input type="number" asp-for="QuantidadeNumeroSelecao" maxlength="10" class="form-control" id="QuantidadeNumeroSelecao" placeholder="Quantidade de números para seleção" disabled>
+        </div>
+    </div>
+
+    <div class="form-group col-md-6">
+        <label for="dataSorteio">Quando será o sorteio</label>
+        <input type="date" asp-for="DataSorteio" class="form-control" id="dataSorteio" placeholder="Data Sorteio" disabled>
+    </div>
+
+    <div class="form-group col-md-6">
+        <label for="premio">Prêmio</label>
+        <input type="text" asp-for="Premio" class="form-control" id="premio" placeholder="Qual será o prêmio ?" disabled>
+    </div>
+
+    <button type="submit" class="btn btn-danger w-50" id="btnConfirm">Cancelar Sorteio</button>
+    <a class="btn btn-primary w-50" asp-controller="Jogo" asp-action="Index">Voltar</a>
+</form>

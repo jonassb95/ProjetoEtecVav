@@ -70,7 +70,7 @@ namespace Loto.Prize.Presentation.Controllers
         [HttpPost]
         [ValidateAntiForgeryToken]
         [Authorize]
-        public async Task<IActionResult> Create([Bind("Id,IdUsuario,IdJogo,NumerosEscolhidos,DataVolante")] VolanteModel volanteModel)
+        public async Task<IActionResult> Create([Bind("Id,IdUsuario,IdJogo,NumerosEscolhidos,DataVolante,NomeParticipante")] VolanteModel volanteModel)
         {
             if (ModelState.IsValid)
             {

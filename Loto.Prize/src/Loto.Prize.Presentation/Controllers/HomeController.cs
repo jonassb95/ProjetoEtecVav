@@ -30,9 +30,14 @@ namespace Loto.Prize.Presentation.Controllers
             return View(jogo);
         }
 
-        public IActionResult Privacy()
+        public IActionResult Listar()
         {
-            return View();
+            // Aqui você recuperaria os dados dos volantes do seu banco de dados ou de onde estiverem armazenados
+            List<VolanteModel> volantes = _context.Volante.ToList(); // Supondo que você esteja usando o Entity Framework Core e tenha um contexto (_context) configurado
+
+            ViewBag.Volante = volantes;
+
+            return View(); // Retorna a view correspondente
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
