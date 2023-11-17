@@ -3,8 +3,6 @@
     ViewData["Title"] = "Home";
 }
 
-
-
 <div class="row">
     <div class="col-10" style="min-height:75vh;">
 
@@ -58,7 +56,7 @@
                             <p>Comparação com Números Sorteados:</p>
                             @foreach (var numeroSorteado in Model.NumerosSorteados.Split(";"))
                             {
-                                if (vol.NumerosEscolhidos.Split(";").Contains(numeroSorteado))
+                                if (vol.NumerosEscolhidos.Contains(numeroSorteado))
                                 {
                                     <p class="text-success">@numeroSorteado</p>
                                     var acertos = +1;

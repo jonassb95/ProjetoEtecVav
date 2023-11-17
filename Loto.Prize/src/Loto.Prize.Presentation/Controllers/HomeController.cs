@@ -1,8 +1,10 @@
 ﻿using Loto.Prize.Presentation.Data;
 using Loto.Prize.Presentation.Models;
 using Microsoft.AspNetCore.Mvc;
+using NuGet.Versioning;
 using System.Diagnostics;
 using System.Linq;
+using System.Runtime.CompilerServices;
 
 namespace Loto.Prize.Presentation.Controllers
 {
@@ -20,8 +22,12 @@ namespace Loto.Prize.Presentation.Controllers
         public IActionResult Index()
         {
             var jogo = _context.Jogo.OrderByDescending(x => x.DataSorteio).FirstOrDefault(x => x.NumerosSorteados != null);
-            ViewBag.Jogo = _context.Jogo.OrderByDescending(x => x.DataSorteio).FirstOrDefault(x => x.NumerosSorteados == null);
-            
+            var jogoTeste = _context.Jogo.OrderByDescending(x => x.DataSorteio).FirstOrDefault(x => x.NumerosSorteados == null);
+            ViewBag.Jogo = jogoTeste;
+
+
+            ViewBag.Volante = _context.Volante.Where(x => x.NumerosEscolhidos != null && x.IdJogo == jogo.Id).ToList();
+
             if (ViewBag.Jogo == null)
             {
                 // Sem jogos a serem jogados.
@@ -30,15 +36,7 @@ namespace Loto.Prize.Presentation.Controllers
             return View(jogo);
         }
 
-        public IActionResult Listar()
-        {
-            // Aqui você recuperaria os dados dos volantes do seu banco de dados ou de onde estiverem armazenados
-            List<VolanteModel> volantes = _context.Volante.ToList(); // Supondo que você esteja usando o Entity Framework Core e tenha um contexto (_context) configurado
 
-            ViewBag.Volante = volantes;
-
-            return View(); // Retorna a view correspondente
-        }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
