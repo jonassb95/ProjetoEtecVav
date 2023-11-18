@@ -157,6 +157,7 @@ namespace Loto.Prize.Presentation.Controllers
             novoJogo.Id = Guid.NewGuid();
             novoJogo.TotalNumero = 60;
             novoJogo.DataCriacao = DateTime.Now;
+            novoJogo.DataSorteio = DateTime.Today.AddDays(1);
             novoJogo.QuantidadeNumeroSelecao = 6;
             novoJogo.Nome = "Mega-Sena";
             novoJogo.Premio = "Surpresa";

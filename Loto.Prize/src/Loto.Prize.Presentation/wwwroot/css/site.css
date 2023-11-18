@@ -49,3 +49,27 @@ body {
     text-align: center;
 }
 
+@keyframes fa-blink {
+    0% {
+        color: lawngreen;
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.5;
+        color: green;
+    }
+
+    100% {
+        opacity: 0;
+        color: green;
+    }
+}
+
+.fa-blink {
+    -webkit-animation: fa-blink .75s linear infinite;
+    -moz-animation: fa-blink .75s linear infinite;
+    -ms-animation: fa-blink .75s linear infinite;
+    -o-animation: fa-blink .75s linear infinite;
+    animation: fa-blink .75s linear infinite;
+}

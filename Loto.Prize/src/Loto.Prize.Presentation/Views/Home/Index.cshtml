@@ -20,16 +20,20 @@
                 </div>
                 <div class="d-flex flex-column justify-content-center" id="numerosSorteados">
                     <div class="d-flex flex-row justify-content-center my-5" id="Sorteio88">
-                        @foreach (var numero in Model.NumerosSorteados.Split(";").ToList())
-                        {
-                            <p class="resultado-loteria">@numero</p>
+                        @{var numerosOrdenados = Model.NumerosSorteados.Split(";").OrderBy(n => int.Parse(n)).ToList();
+                            @foreach (var numero in numerosOrdenados)
+                            {
+                                <p class="resultado-loteria">@numero</p>
+                            }
                         }
                     </div>
                     <div class="w-50 text-center d-flex justify-content-center" id="proxSorteio">
                         <p class="bg-secondary">
                             @if (ViewBag.Jogo != null)
                             {
-                                <p class="bg-secondary m-1">Próximo sorteio, @ViewBag.Jogo.DataSorteio.DayOfWeek, @ViewBag.Jogo.DataSorteio.ToString("dd/MM/yyyy")</p>
+                               @*  <p class="bg-secondary m-1">Próximo sorteio, @ViewBag.Jogo.DataSorteio.DayOfWeek, @ViewBag.Jogo.DataSorteio.ToString("dd/MM/yyyy")</p>
+                                *@
+
                             }
                             else
                             {
@@ -41,37 +45,58 @@
                 <div class="d-flex justify-content-center">
                     <div class="col-12 border-bottom w-75 d-flex"></div>
                 </div>
-                <div class="text-center mt-5">
-                    @if (ViewBag.Volante != null)
-                    {
-                        foreach (var vol in ViewBag.Volante)
+                <div class="container">
+                    <h3 class="d-flex flex-row justify-content-center my-1 mb-3">Participantes</h3>
+                    <div class="row">
+                        @if (ViewBag.Volante != null)
                         {
-                            <h4>Participante: @vol.NomeParticipante</h4>
-                            <p>Números Escolhidos:</p>
-                            @foreach (var numeroEscolhido in vol.NumerosEscolhidos.Split(";"))
+                            foreach (var vol in ViewBag.Volante)
                             {
-                                <p class="numero-escolhido">@numeroEscolhido</p>
-                            }
-
-                            <p>Comparação com Números Sorteados:</p>
-                            @foreach (var numeroSorteado in Model.NumerosSorteados.Split(";"))
-                            {
-                                if (vol.NumerosEscolhidos.Contains(numeroSorteado))
+                                int acertos = 0;
+                                <div class="col-md-6 text-center border-bottom border-success mb-3">                             
+                                @foreach (var numeroEscolhido in vol.NumerosEscolhidos.Split(";"))
                                 {
-                                    <p class="text-success">@numeroSorteado</p>
-                                    var acertos = +1;
+                                    <p class="numero-escolhido"> @numeroEscolhido</p>
                                 }
-                                else
-                                {
-                                    <p class="text-danger">@numeroSorteado</p>
+                                @foreach (var numeroSorteado in Model.NumerosSorteados.Split(";"))
+                                {                                       
+                                    if (vol.NumerosEscolhidos.Contains(numeroSorteado))
+                                    {
+                                        acertos++;
+                                    }
                                 }
+                                        <div class="row">
+                                                <h4 class="col-md-6">@vol.NomeParticipante</h4>
+                                                @if (acertos >= 2)
+                                                {
+                                                    <h5 class="col-md-6 fa-blink">Total acertos: @acertos</h5>
+                                                }
+                                               
+                                                else if (acertos == 4)
+                                                {
+                                                    <h5 class="col-md-6">Você ganhou na Quaaadraa !</h5>
+                                                }
+                                                else if (acertos == 5)
+                                                {
+                                                    <h5 class="col-md-6">Você ganhou na Quinaa !!</h5>
+                                                }
+                                                else if (acertos == 6)
+                                                {
+                                                    <h5 class="col-md-6">Você ganhou a MEGAASEENAAA !!!</h5>
+                                                }
+                                                else
+                                                {
+                                                    <h5 class="col-md-6">Total acertos: @acertos</h5>
+                                                }
+                                    </div>                               
+                                </div>
                             }
                         }
-                    }
-                    else
-                    {
-                        <p>Sem participantes</p>
-                    }  
+                        else
+                        {
+                            <p>Sem participantes</p>
+                        }
+                    </div>
                 </div>
             </div>
         }
@@ -98,30 +123,3 @@
     }
 
 }
-
-
-`<script>
-     var boxParticipantes = document.getElementById('participantes');
-    var i = 0;
-    while (i < 3) {
-        i++
-         createParticipante();
-    }
-
-     function createParticipante() {
-         var element = document.createElement('tr');
-         boxParticipantes.appendChild(element);
-
-         var element1 = document.createElement('th');
-         element1.setAttribute('value', 'Leandrinnnho');
-         element.appendChild(element1);
-
-         var element2 = document.createElement('td');
-         element2setAttribute('value', '01,02,03,04,06,08');
-         element.appendChild(element2);
-
-         var element3 = document.createElement('td');
-         element3.setAttribute('value', '0 Acertos');
-         element.appendChild(element3);
-     }
-</script>
