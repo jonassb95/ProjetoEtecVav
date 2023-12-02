@@ -121,50 +121,48 @@
         var result = input.checked;
         var valor = document.getElementById("NumerosEscolhidos").value;
 
-        if (count <= 5) {
+        var numerosEscolhidos = valor.split(";");
+        var quantidadeSelecionados = numerosEscolhidos.length;
+
+        if (quantidadeSelecionados < 6 || result === false) {
             if (result) {
                 count++;
                 input.checked = true;
 
-                if (valor == "") {
-                    valor = input.value;
-                    /*createViewNumber(input.value);*/
-                }
-                else {
-                    /*createViewNumber(input.value);*/
-                    valor = valor + ";" + input.value;
-                }
-                document.getElementById("NumerosEscolhidos").value = valor;
+                if (count <= 6) {
+                    if (valor == "") {
+                        valor = input.value;
+                    } else {
+                        valor = valor + ";" + input.value;
+                    }
+                    document.getElementById("NumerosEscolhidos").value = valor;
 
-                document.getElementById("lbl-escolha-" + input.value).setAttribute('class', 'btn rounded-5 numero-volante-escolhido ');
+                    document.getElementById("lbl-escolha-" + input.value).setAttribute('class', 'btn rounded-5 numero-volante-escolhido ');
+                } else {
+                    console.log("Quantidade total de números já escolhidos. Escolha novos números removendo outro número.");
+                    input.checked = false;
+                    count--;
+                }
+            } else {
+                count--;
+                input.checked = false;
 
-                //input.parentElement.setAttribute('class', ' numero-volante-escolhido ');
+                if (valor.includes(input.value)) {
+                    if (valor.includes(input.value + ";")) {
+                        valor = valor.replace(input.value + ";", '');
+                    } else if (valor.includes(";" + input.value)) {
+                        valor = valor.replace(";" + input.value, '');
+                    } else {
+                        valor = valor.replace(input.value, '');
+                    }
+                    document.getElementById("NumerosEscolhidos").value = valor;
+
+                    document.getElementById("lbl-escolha-" + input.value).setAttribute('class', 'btn rounded-5');
+                }
             }
-        }
-        else if (result) {
-            console.log("Quantidade total de números já escolhidos. Escolha novos números removendo outro número.");
+        } else {
+            console.log("Você já selecionou o número máximo permitido (6).");
             input.checked = false;
-        }
-
-        if (!result) {
-            count--;
-            input.checked = false;
-            var teste = document.getElementById("NumerosEscolhidos").value;
-
-            if (teste.includes(input.value)) {
-                if (teste.includes(input.value + ";")) {
-                    teste = teste.replace(input.value + ";", '');
-                }
-                else if (teste.includes(";" + input.value)) {
-                    teste = teste.replace(";" + input.value, '');
-                }
-                else {
-                    teste = teste.replace(input.value, '');
-                }
-                document.getElementById("NumerosEscolhidos").value = teste;
-
-                document.getElementById("lbl-escolha-" + input.value).setAttribute('class', 'btn rounded-5');
-            }
         }
     }
 </script>

@@ -78,6 +78,7 @@ namespace Loto.Prize.Presentation.Controllers
                 volanteModel.IdUsuario = Guid.Parse(HttpContext.User.FindFirstValue(ClaimTypes.NameIdentifier));
                 volanteModel.DataVolante = DateTime.Now;
 
+
                 _context.Add(volanteModel);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));

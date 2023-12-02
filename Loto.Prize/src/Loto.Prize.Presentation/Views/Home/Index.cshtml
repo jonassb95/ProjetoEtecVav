@@ -48,59 +48,62 @@
                 <div class="container">
                     <h3 class="d-flex flex-row justify-content-center my-1 mb-3">Participantes</h3>
                     <div class="row">
-                        @if (ViewBag.Volante != null)
+                        @foreach (var vol in ViewBag.Volante)
                         {
-                            foreach (var vol in ViewBag.Volante)
-                            {
-                                int acertos = 0;
-                                var numerosEscolhidos = vol.NumerosEscolhidos.Split(";");
+                            var numerosEscolhidos = vol.NumerosEscolhidos.Split(";");
+                            var numerosOrdenadosU = new List<int>();
 
-                                <div class="col-md-6 text-center border-bottom border-success mb-3">
-                                    @foreach (var numeroEscolhido in numerosEscolhidos)
-                                    {
-                                        <p class="numero-escolhido">@numeroEscolhido</p>
-                                    }
-                                    @foreach (var numeroSorteado in Model.NumerosSorteados.Split(";"))
-                                    {
-                                        foreach (var numeroEscolhido in numerosEscolhidos)
-                                        {
-                                            if (numeroEscolhido == numeroSorteado)
-                                            {
-                                                acertos++;
-                                                break;
-                                            }
-                                        }
-                                    }
-                                    <div class="row">
-                                        <h4 class="col-md-6">@vol.NomeParticipante</h4>
-                                        @if (acertos >= 2)
-                                        {
-                                            <h5 class="col-md-6 fa-blink">Total acertos: @acertos</h5>
-                                        }
-                                        else if (acertos == 4)
-                                        {
-                                            <h5 class="col-md-6">Você ganhou na Quaaadraa !</h5>
-                                        }
-                                        else if (acertos == 5)
-                                        {
-                                            <h5 class="col-md-6">Você ganhou na Quinaa !!</h5>
-                                        }
-                                        else if (acertos == 6)
-                                        {
-                                            <h5 class="col-md-6">Você ganhou a MEGAASEENAAA !!!</h5>
-                                        }
-                                        else
-                                        {
-                                            <h5 class="col-md-6">Total acertos: @acertos</h5>
-                                        }
-                                    </div>                               
-                                </div>
+                            foreach (var numeroEscolhido in numerosEscolhidos)
+                            {
+                                numerosOrdenadosU.Add(int.Parse(numeroEscolhido));
                             }
+
+                            numerosOrdenadosU.Sort();
+                            int acertos = 0;
+
+                            foreach (var numeroSorteado in Model.NumerosSorteados.Split(";"))
+                            {
+                                foreach (var numeroEscolhido in numerosEscolhidos)
+                                {
+                                    if (numeroEscolhido == numeroSorteado)
+                                    {
+                                        acertos++;
+                                        break;
+                                    }
+                                }
+                            }
+
+                            <div class="col-md-6 text-center border-bottom border-success mb-3">
+                                @foreach (var OrdenadosU in numerosOrdenadosU)
+                                {
+                                    <p class="numero-escolhido">@OrdenadosU</p>
+                                }
+                                <div class="row">
+                                    <h4 class="col-md-6">@vol.NomeParticipante</h4>
+                                    @if (acertos >= 2)
+                                    {
+                                        <h5 class="col-md-6 fa-blink">Total acertos: @acertos</h5>
+                                    }
+                                    else if (acertos == 4)
+                                    {
+                                        <h5 class="col-md-6">Você ganhou na Quaaadraa !</h5>
+                                    }
+                                    else if (acertos == 5)
+                                    {
+                                        <h5 class="col-md-6">Você ganhou na Quinaa !!</h5>
+                                    }
+                                    else if (acertos == 6)
+                                    {
+                                        <h5 class="col-md-6">Você ganhou a MEGAASEENAAA !!!</h5>
+                                    }
+                                    else
+                                    {
+                                        <h5 class="col-md-6">Total acertos: @acertos</h5>
+                                    }
+                                </div>
+                            </div>
                         }
-                        else
-                        {
-                            <p>Sem participantes</p>
-                        }
+
                     </div>
                 </div>
             </div>
