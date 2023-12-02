@@ -55,12 +55,11 @@
                 <h3 class="text-center">Data sorteio: @ViewBag.Jogo.DataSorteio.ToString("dd/MM/yyyy")</h3>
                 <p></p>
 
-                @if (ViewBag.Admin == "true")
-                {
+               
                     <div class="d-grid gap-2">
                         <button class="btn btn-primary" asp-controller="Jogo" asp-action="Sortear">Fazer Sorteio</button>
                     </div>
-                }
+                
                
             
             </div>
